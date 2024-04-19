@@ -1,0 +1,1796 @@
+[{
+  "_id": {
+    "$oid": "6366b6d15232be7d94049d26"
+  },
+  "name": "Barbell bent over row",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "barbell",
+  "bodyPart": "Back",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/Barbell-bent-over-row.gif?alt=media&token=77acc103-f5b1-466d-be37-1da8c03fcd1b",
+  "level": "moderate",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 5,
+  "description": "3-4 sets of 6-8 reps with a heavier weight that challenges you.",
+  "instructor": "The barbell bent over row is a weight training exercise that targets the back muscles, particularly the lats and rhomboids. Here are the steps to perform the barbell bent over row:\n\n1-Stand with your feet shoulder-width apart and grip the barbell with an overhand grip, hands slightly wider than shoulder-width apart.\n\n2-Bend your knees slightly and hinge forward at the hips, keeping your back straight and your core engaged. The barbell should hang directly below your shoulders.\n\n3-Pull the barbell up towards your chest, keeping your elbows close to your body and your shoulders down and back.\n\n4-Lower the barbell back down to the starting position, and repeat the movement for your desired number of repetitions.\n\n*It's important to keep your back straight and avoid using momentum to lift the weight to prevent injury. Additionally, make sure to use a weight that you can lift comfortably without straining your muscles. If you're new to the exercise, start with lighter weights and gradually increase the weight as you become more comfortable and confident with the movement.\n",
+  "type": "normal",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "6366b7ac5232be7d94049d2a"
+  },
+  "name": "Barbell deadlift",
+  "active": true,
+  "category": "Legs & Calves",
+  "equipment": "barbell",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/22141301-Barbell-Deadlift-female_Hips_720.gif?alt=media&token=44d4f26a-7a1d-48f2-a42c-6233989e070f",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 4,
+  "type": "normal",
+  "counter": null,
+  "description": "set 1:10-12 reps \nset 2: 8-10 reps \nset 3: 6-8 reps \n[[weight increases reps decrease]]",
+  "instructor": "1- Stand with your feet hip-width apart and your toes under the barbell. The bar should be positioned over the middle of your feet.\n\n2- Bend down and grip the bar with both hands, using an overhand or mixed grip (one hand overhand, one hand underhand). Your hands should be shoulder-width apart.\n\n3- Lower your hips, lift your chest, and straighten your back, keeping your core tight and your shoulders back.\n\n4- Take a deep breath and brace your core. Then, drive through your heels and lift the bar off the ground, keeping it close to your body.\n\n5- Lift the bar until you are standing upright, with your hips and knees fully extended.\n\n6- Pause briefly at the top of the movement, then slowly lower the bar back down to the ground, keeping it close to your body.\n\nSome tips to keep in mind:\n\n- Use a weight that is challenging but allows you to maintain proper form throughout the exercise.\n- Keep your core tight and your back straight throughout the movement to avoid unnecessary strain on your lower back.\n- Keep the bar close to your body throughout the movement to avoid excessive stress on your lower back and maintain control of the weight.\n- Exhale as you lift the bar off the ground and inhale as you lower it back down.\n- If you experience any discomfort or pain, stop the exercise and consult a healthcare professional.\n\n\n",
+  "level": "moderate",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "6366b61f5232be7d94049d24"
+  },
+  "name": "Overhead press",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "equipment": "barbell",
+  "bodyPart": "Shoulder",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/Overhead%20press.gif?alt=media&token=3c4c4947-556c-4e23-af73-b9bb41d7a9e7",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 4,
+  "description": "2-3 sets of 10-12 reps ",
+  "instructor": "1-Sit on a bench with your back straight, feet flat on the ground, and grip the barbell with an overhand grip, hands slightly wider than shoulder-width apart.\n\n2-Rest the barbell on your upper chest, just below your chin, and lift it up to the starting position by pushing the barbell up with your arms, keeping your elbows slightly in front of the bar.\n\n3-Press the barbell up and over your head in a straight line, extending your arms fully at the top of the movement.\n\n4-Lower the barbell back down to your upper chest, and repeat the movement for your desired number of repetitions.\n\n*It's important to keep your core engaged and your back straight throughout the exercise to avoid injury. Additionally, make sure to use a weight that you can lift comfortably without straining your muscles. If you're new to the exercise, start with lighter weights and gradually increase the weight as you become more comfortable and confident with the movement.",
+  "type": "normal",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "6366b88a5232be7d94049d2c"
+  },
+  "name": "Reverse fly",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "bodyPart": "Shoulder",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/reverse-pec-dec-machine.gif?alt=media&token=b727e67a-8f85-42c7-b482-e2800d565bd0",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 7,
+  "description": "3 sets of 8-12 reps with moderate to heavy weights",
+  "equipment": "leverage machine",
+  "instructor": "The reverse fly machine is a weight training exercise that targets the muscles of the upper back, particularly the rear deltoids and rhomboids. Here are the steps to perform the reverse fly machine exercise:\n\n1-Adjust the seat of the machine so that the handles are level with your shoulders.\n\n2-Sit on the machine with your chest against the back pad and your feet flat on the ground.\n\n3-Grasp the handles with an overhand grip, and make sure your arms are fully extended.\n\n4-Squeeze your shoulder blades together and pull the handles back towards your chest.\n\n5-Pause for a moment at the end of the movement, then slowly release back to the starting position.\n\n6-Repeat the movement for your desired number of repetitions.\n\n*It's important to use proper form and avoid using momentum to lift the weight to prevent injury. Additionally, make sure to use a weight that you can lift comfortably without straining your muscles. If you're new to the exercise, start with lighter weights and gradually increase the weight as you become more comfortable and confident with the movement.\n\n",
+  "type": "normal",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "6366b8cd5232be7d94049d2e"
+  },
+  "name": "lever chest press",
+  "active": true,
+  "category": "Chest & Triceps",
+  "bodyPart": "Chest",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/11951301-Lever-Incline-Hammer-Chest-Press_Chest_360.gif?alt=media&token=b90a3685-eb87-4faa-b5ed-66177b8c6bf8",
+  "level": "moderate",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 9,
+  "type": "normal",
+  "description": "2-3 sets of 12-15 reps with lighter weights.",
+  "instructor": "The lever chest press is a weight training exercise that targets the muscles of the chest, shoulders, and triceps. Here are the steps to perform the lever chest press:\n\n1-Adjust the machine to fit your body size and choose the appropriate weight.\n\n2-Sit on the machine with your back flat against the backrest and your feet firmly planted on the floor.\n\n3-Grasp the handles of the machine with your palms facing down, and push the handles forward until your arms are fully extended.\n\n4-Slowly lower the handles back towards your chest while keeping your elbows slightly bent and your shoulder blades squeezed together.\n\n5-Pause for a moment at the end of the movement, then push the handles back to the starting position.\n\n6-Repeat the movement for your desired number of repetitions.\n\n*It's important to use proper form and avoid using momentum to lift the weight to prevent injury. Additionally, make sure to use a weight that you can lift comfortably without straining your muscles. If you're new to the exercise, start with lighter weights and gradually increase the weight as you become more comfortable and confident with the movement.\n\n",
+  "equipment": "leverage machine",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "6366c1735232be7d94049d38"
+  },
+  "name": "lever seated hip abduction",
+  "active": true,
+  "category": "Legs & Calves",
+  "equipment": "leverage machine",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/05971301-Lever-Seated-Hip-Abduction_Hips-FIX_360-1.gif?alt=media&token=e9c96c93-1b53-40c8-9f93-f4aa482cd7b4",
+  "level": "moderate",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 9,
+  "type": "normal",
+  "inputType": "weight",
+  "description": "3 sets of 12-15 reps",
+  "instructor": "1- Sit on the lever seated hip abduction machine with your back straight and your feet flat on the footrests.\n\n2- Adjust the weight to a level that is challenging but allows you to maintain proper form throughout the exercise.\n\n3- Place your hands on the side handles and brace your core.\n\n4- Slowly press your legs outwards, away from each other, using the sides of your glutes to drive the movement.\n\n5- Pause briefly at the end of the movement, then slowly return your legs back to the starting position, keeping your movements controlled.\n\nSome tips to keep in mind:\n\n- Keep your back straight and your core engaged throughout the exercise to avoid unnecessary strain on your lower back.\n- Focus on using the sides of your glutes to drive the movement and avoid using momentum or swinging your legs.\n- Exhale as you press your legs outwards and inhale as you return them back to the starting position.\n- Use a weight that is challenging but allows you to maintain proper form throughout the exercise.\n"
+},
+{
+  "_id": {
+    "$oid": "636790c54f1812a42a541902"
+  },
+  "name": "Cool Down -  Downward Facing Dog",
+  "type": "cooldown",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/downward-facing-dog-1024x825.png?alt=media&token=391d8a79-325a-4aa1-a38f-df0815abb417",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 10,
+  "description": "Repeat the cool down 1-2 times for 10-15 seconds or longer.",
+  "instructor": "",
+  "bodyPart": "Shoulder",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63bd2664ff18f7182d1928a6"
+  },
+  "name": "Reverse Crunch",
+  "counter": 45,
+  "type": "sub",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "body weight",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/reverse-crunch.gif?alt=media&token=c65cef1e-81ad-4b4d-991e-a096f40a93eb",
+  "level": "beginner",
+  "loc": "Home",
+  "subsitute": [
+    {
+      "_id": {
+        "$oid": "63bd2361ff18f7182d1928a2"
+      },
+      "name": "Side Crunches",
+      "counter": 45,
+      "type": "normal",
+      "active": true,
+      "category": "Back & Abs",
+      "equipment": "body weight",
+      "bodyPart": "Waist",
+      "gifUrl": "http://backend.fitlinez.com/appgifs/side-crunch.gif?alt=media&token=9e4ca973-1e57-4fe4-9409-b31cb75f1f1b",
+      "level": "beginner",
+      "loc": "Both",
+      "__v": 0,
+      "inputType": "rep",
+      "order": 6,
+      "description": "3 sets of 10-12 reps per side",
+      "instructor": "Begin lying on your side with the legs slightly bent and stacked one on top of the other. Place your bottom hand on your tummy (so you can feel your side abs) and your top hand behind your head with the head resting on the ground.\n\nCrunch your top elbow toward your top hip bone as you raise the head and shoulders off the ground slightly.\n\nThen, lower back down to the ground and relax your head.\n\nRepeat for the desired repetitions, on both sides."
+    }
+  ],
+  "__v": 0,
+  "order": null,
+  "description": "3 sets of 10-15 reps per set",
+  "instructor": "",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63bd2d21ff18f7182d1928b4"
+  },
+  "name": "Cool Down - Frog Stretch",
+  "counter": 45,
+  "type": "cooldown",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "body weight",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/frog-pose.gif?alt=media&token=53ae3e41-0941-4eb7-8e26-1aa69cd79e39",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 14,
+  "description": "30 seconds to 1 minute, and repeat it 2-3 times",
+  "instructor": "",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63bd2de6ff18f7182d1928b6"
+  },
+  "name": "Cool Down - Butterfly Stretch",
+  "counter": 45,
+  "type": "cooldown",
+  "active": true,
+  "category": "Back & Abs",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/butterfly-yoga-pose.gif?alt=media&token=2b1560b7-0d6f-4999-beb9-d5e71c93596f",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 13,
+  "equipment": "body weight",
+  "description": "1 set , 15-20 reps",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63c118a1d098b0d57f4e1af4"
+  },
+  "name": "kettlebell swing",
+  "counter": 60,
+  "description": "3 sets of 10-15 reps",
+  "type": "normal",
+  "active": true,
+  "category": "Legs & Calves",
+  "equipment": "kettlebell",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/how-to-do-a-kettlebell-single-arm-swing.gif?alt=media&token=00083030-2e66-41d8-96d8-c6661eaf4782",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 10,
+  "subsitute": [
+    {
+      "_id": {
+        "$oid": "63c4329fa0009819e5a95914"
+      },
+      "bodyPart": "Leg",
+      "equipment": "dumbbell",
+      "gifUrl": "http://backend.fitlinez.com/appgifs/dumbbell-sumo-squat.gif?alt=media&token=a96d2315-38fb-4451-b8c8-f687dba9c8b4",
+      "id": 291,
+      "name": "dumbbell goblet squat",
+      "target": "glutes",
+      "active": true,
+      "category": "Legs & Calves",
+      "counter": 60,
+      "inputType": "weight",
+      "description": "3 sets of 8-10 reps",
+      "loc": "Both",
+      "type": "sub",
+      "instructor": "1-Hold a dumbbell vertically by one end, with both hands under the top of the weight.\n\n2-Stand with your feet slightly wider than shoulder-width apart, toes pointing slightly outward.\n\n3-Hold the weight close to your chest with your elbows pointing down.\n\n4-Keep your chest up and your shoulders back as you lower your body down into a squat, pushing your hips back and bending your knees.\n\n5-Lower your body until your thighs are parallel to the ground, keeping your knees in line with your toes.\n\n6-Push through your heels to stand back up to the starting position.\n\n",
+      "level": "beginner"
+    }
+  ],
+  "inputType": "weight",
+  "instructor": "1-Start by standing with your feet shoulder-width apart and your toes pointing slightly outwards. Place the kettlebell on the ground in front of you.\n2-Hinge at your hips and bend your knees slightly to pick up the kettlebell with both hands.\n3-Stand up straight and swing the kettlebell back between your legs, keeping your arms straight and your core engaged.\n4-Quickly thrust your hips forward and swing the kettlebell up to chest height, while maintaining a straight back and using the momentum to power the movement.\n5-Allow the kettlebell to swing back down between your legs and repeat the movement for your desired number of reps.\nSome tips to keep in mind while performing a kettlebell swing:\n\nUse a weight that is challenging but manageable for your fitness level.\nFocus on using your hips to generate power in the movement, rather than relying on your arms.\nKeep your core engaged throughout the exercise to protect your lower back.\nKeep your shoulders down and away from your ears.\nBreathe in as you swing the kettlebell back between your legs, and exhale as you swing it up to chest height.\nIf you experience any discomfort or pain while performing the exercise, stop immediately and consult a fitness professional.\n\n\n"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a9582b"
+  },
+  "bodyPart": "Chest",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/bench%20dip%20on%20floor.gif?alt=media&token=dc5859dc-8edc-40a6-afc3-85f48ec25dc0",
+  "id": 1399,
+  "name": "bench dip on floor",
+  "target": "triceps",
+  "active": false,
+  "category": "Upper body",
+  "counter": 60,
+  "loc": "Home",
+  "order": 4,
+  "type": "normal",
+  "description": "Beginner: 2-3 sets of 10-12 reps\nIntermediate: 3-4 sets of 8-10 reps\nAdvanced: 4-5 sets of 6-8 reps",
+  "instructor": "1-Sit on the floor with your legs extended in front of you and your hands on the floor beside your hips, fingers pointing towards your feet.\n\n2-Press your palms into the floor and lift your hips off the ground, straightening your arms as much as possible.\n\n3-Keeping your elbows close to your body, lower your hips towards the ground by bending your elbows. Your elbows should form a 90-degree angle.\n\n4-Push back up through your hands to return to the starting position.\n\n5-Repeat for desired number of reps.\n\n*Make sure to keep your shoulders down and your chest lifted throughout the exercise. Also, be sure to engage your triceps, chest, and core muscles during the movement.",
+  "level": "beginner",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a958a9"
+  },
+  "bodyPart": "Chest",
+  "equipment": "cable",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/cable-bench-press.gif?alt=media&token=baf8a965-9f6a-420f-8959-6a1b2a68adb5",
+  "id": 2144,
+  "name": "Cable Chest Exercises ",
+  "target": "pectorals",
+  "active": true,
+  "category": "Upper body",
+  "loc": "Gym",
+  "type": "sub",
+  "counter": 60,
+  "description": "3 sets of 10-12 reps with a weight that provides appropriate resistance.",
+  "instructor": "1-Adjust the weight on the cable machine to an appropriate level for your fitness level and training goals.\n\n2-Sit on a bench or seat facing the cable machine with your feet flat on the ground and your back straight.\n\n3-Grab the handles with both hands and bring them to the sides of your chest, keeping your elbows bent at 90 degrees. This is the starting position.\n\n4-Press the handles forward, extending your arms and keeping your elbows slightly bent at the top of the movement.\n\n5-Pause briefly at the top of the movement, squeezing your chest muscles.\n\n6-Slowly bring the handles back to the starting position, keeping your elbows at a 90-degree angle.\n\n7-Repeat for the desired number of reps.\n\n*Remember to keep your back straight and your core engaged throughout the exercise. It's also important to use a weight that allows you to maintain proper form and control throughout the movement. Additionally, be sure to exhale as you press the handles forward and inhale as you bring them back to the starting position.\n\n",
+  "level": "beginner",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a957b6"
+  },
+  "bodyPart": "Glutes",
+  "equipment": "barbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/back-extension.gif?alt=media&token=908fb51e-9e0e-43c1-be04-96102519f68e",
+  "id": 3562,
+  "name": "Back Extensions",
+  "target": "glutes",
+  "active": true,
+  "category": "Full body",
+  "counter": 60,
+  "description": "3 sets of 12 reps",
+  "loc": "Gym",
+  "type": "sub",
+  "instructor": "",
+  "level": "beginner",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95964"
+  },
+  "bodyPart": "Leg",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-dumbbell-curtsy-lunges.gif?alt=media&token=def70a28-eb20-4e0f-b03a-145ae88c197b",
+  "id": 336,
+  "name": "Dumbbell Curtsy Lunges",
+  "target": "glutes",
+  "active": false,
+  "category": "Legs & Calves",
+  "counter": 60,
+  "description": "3 sets of 10-12 reps per leg",
+  "loc": "Home",
+  "order": 5,
+  "type": "normal",
+  "instructor": "1- Begin standing with the feet hip distance apart or slightly wider. Hold dumbbells down at your sides with a neutral grip (palms facing each other) and arms straight.\n\n2- Step one foot back and across midline toward the opposite side.\n\n3- Sit the hips down and back as you lunge down until the back knee almost touches the ground.\n\n5- Then, reverse the motion as you stand back up, bring the back foot back to the start position, and straighten the legs.\n\n6- Repeat for the desired repetitions on each leg.",
+  "level": "beginner",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a8c"
+  },
+  "bodyPart": "Chest",
+  "equipment": "body weight",
+  "gifUrl": "https://backend.fitlinez.com/appgifs/plank-movement.gif",
+  "id": 3011,
+  "name": "Plank Movement",
+  "target": "triceps",
+  "category": "Chest & Triceps",
+  "description": "3 sets of 10-12 reps",
+  "loc": "Both",
+  "type": "sub",
+  "active": true,
+  "instructor": "",
+  "counter": 60,
+  "level": "beginner",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a959ac"
+  },
+  "bodyPart": "Leg",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/smith-machine-squat-benefits.gif?alt=media&token=bd7373af-ab41-4fc4-af02-423418b3d7f9",
+  "id": 371,
+  "name": "Smith Machine Squat",
+  "target": "glutes",
+  "active": true,
+  "category": "Legs & Calves",
+  "loc": "Gym",
+  "order": 2,
+  "type": "normal",
+  "description": "set 1:10-12 reps \nset 2: 8-10 reps \nset 3: 6-8 reps \nweight increases while reps decrease.",
+  "instructor": "1-Position the bar just below shoulder level and adjust the safety stops right above knee height.\n2-Place your pinkies on the smooth ring of the barbell.\n3-Get under the bar and position at the base of your traps looking straight ahead.\n4-Unrack the bar by rotating your wrists to remove the safety hooks.\n5-Take a deep breath and keep your elbows in line with your torso.\n6-Descend by simultaneously pushing the hips back and bending the knees.\n7-Once your thighs reach parallel with the floor, reverse the movement by driving your feet into the floor and flexing your quads.\n8-Finish the lift by exhaling as you fully extend the hips and knees.",
+  "counter": 60,
+  "level": "moderate",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a959b9"
+  },
+  "bodyPart": "Shoulder",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/dumbbell-rear-delt-row.gif?alt=media&token=96a0d28f-a481-4865-916c-26b159310587",
+  "id": 377,
+  "name": "dumbbell rear delt row_shoulder",
+  "target": "delts",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "counter": 60,
+  "loc": "Home",
+  "order": 2,
+  "type": "normal",
+  "description": "3 sets of 8-12 reps per set.\n\n",
+  "instructor": "1- Begin by standing with your feet shoulder-width apart and holding a dumbbell in each hand, with your palms facing towards your body.\n\n2- Hinge forward at your hips, keeping your back straight and your chest lifted. Your arms should be hanging straight down towards the floor, with the dumbbells just below your knees.\n\n3- Next, bend your elbows and raise the dumbbells up towards your chest, squeezing your shoulder blades together at the top of the movement. Keep your elbows close to your body throughout the exercise.\n\n4- Pause briefly at the top of the movement, then slowly lower the dumbbells back down to the starting position.\n\n5- Repeat for the desired number of reps, then switch sides if necessary.\n\n*Remember to maintain proper form throughout the exercise and focus on engaging your rear deltoids and upper back muscles. Start with lighter weights if you're new to the exercise, and gradually increase the weight as you become stronger and more comfortable with the movement.\n\n",
+  "level": "beginner",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b79"
+  },
+  "bodyPart": "Biseps",
+  "equipment": "resistance band",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/dumbbell-hammer-curl.gif?alt=media&token=16288c30-f207-493f-afd6-6adcf8f8ef3f",
+  "id": 3123,
+  "name": "Dumbell Hammer Curl",
+  "target": "biceps",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "loc": "Both",
+  "type": "normal",
+  "description": "3 sets of 12-15 reps",
+  "instructor": "",
+  "level": "beginner",
+  "order": "4",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b84"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/captains-chair-knee-raise.gif?alt=media&token=6f24a88c-b976-4ef8-990c-1ae9a048efdc",
+  "id": 3663,
+  "name": "Hanging Knee Raise",
+  "target": "abs",
+  "active": false,
+  "category": "Back & Abs",
+  "loc": "Both",
+  "order": null,
+  "type": "sub",
+  "counter": null,
+  "description": "3 sets of 8-10 repetitions per leg",
+  "instructor": "",
+  "level": "beginner",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95ba9"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/glute-bridge.gif?alt=media&token=878ca628-33fb-485d-b527-8ce36b2ace33",
+  "id": 705,
+  "name": "Glute Bridge",
+  "target": "abs",
+  "active": true,
+  "category": "Core",
+  "loc": "Both",
+  "type": "sub",
+  "description": "3 sets of 10-15 reps per side ",
+  "instructor": "",
+  "level": "beginner",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95bfb"
+  },
+  "bodyPart": "Shoulder",
+  "equipment": "smith",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/tirage-menton-machine-guidee.gif?alt=media&token=2cf0b137-24e3-4715-8564-5f30d0ad2427",
+  "id": 775,
+  "name": "smith upright row",
+  "target": "delts",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "loc": "Gym",
+  "order": 3,
+  "type": "normal",
+  "instructor": "The Smith upright row is a weight training exercise that targets the shoulders, upper back, and trapezius muscles. Here's how to perform it:\n\n1-Stand in front of a Smith machine with your feet shoulder-width apart and your knees slightly bent. Grasp the bar with an overhand grip, hands shoulder-width apart, and palms facing down.\n\n2-With the bar resting on your thighs, slowly raise the bar up towards your chin by lifting your elbows up and out to the sides. Keep your elbows higher than your wrists.\n\n3-Pause at the top of the movement for a second, then slowly lower the bar back down to your thighs.\n\n4-Repeat the movement for your desired number of repetitions.\n\n*It's important to keep your back straight and your core engaged throughout the exercise to avoid injury. It's also important to use a weight that you can lift comfortably without straining your muscles.",
+  "counter": 60,
+  "description": "3 sets of 12-15 reps\nIt's important to note that when performing any exercise, it's crucial to listen to your body and adjust the weight and reps as needed to avoid injury and ensure proper form.",
+  "level": "beginner",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95c59"
+  },
+  "bodyPart": "Leg",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/resistance-band-lunge.gif?alt=media&token=af9b7b83-7933-46cd-91dc-1274f8bdd9de",
+  "id": 3642,
+  "name": "Resistance Band Lunge",
+  "target": "glutes",
+  "active": true,
+  "category": "Legs & Calves",
+  "counter": 45,
+  "description": "3 sets of 8-12 reps (each leg)",
+  "loc": "Home",
+  "order": 5,
+  "type": "normal",
+  "instructor": "",
+  "level": "beginner",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "647f36f57b0478f99fdfbead"
+  },
+  "name": "12",
+  "counter": 23,
+  "order": 23,
+  "type": "warmup",
+  "active": false,
+  "category": "Shoulders & Biceps",
+  "equipment": "leverage machine",
+  "bodyPart": "Triceps",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/3_4%20sit-up%20(2).gif?alt=media&token=fac83368-0571-4df7-91c2-b8ff0a853690",
+  "level": "beginner",
+  "loc": "Home",
+  "__v": 0,
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "6366bced5232be7d94049d32"
+  },
+  "name": "Warm up - treadmill",
+  "type": "warmup",
+  "active": false,
+  "category": "Shoulders & Biceps",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/treadmill.gif?alt=media&token=86516b33-a0a2-4763-a3d3-b416ec82352b",
+  "level": "moderate",
+  "loc": "Both",
+  "__v": 0,
+  "order": 1,
+  "description": "20-30 reps \n\n",
+  "bodyPart": "Leg"
+},
+{
+  "_id": {
+    "$oid": "6366c04a5232be7d94049d34"
+  },
+  "name": "sled 45° leg press",
+  "active": true,
+  "category": "Legs & Calves",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/leg-press.gif?alt=media&token=851330ef-233a-49d4-a866-a62f447de960",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "counter": 60,
+  "equipment": "leverage machine",
+  "order": 3,
+  "type": "normal",
+  "inputType": "weight",
+  "description": "3-4 sets of 8-12 reps with a moderate weight",
+  "instructor": "1- Start by loading the appropriate weight plates onto the sled. Sit on the sled with your back flat against the backrest and your feet on the footplate.\n\n2- Adjust the seat so that your knees are bent at a 90-degree angle when your feet are placed on the footplate.\n\n3- Place your feet shoulder-width apart and firmly against the footplate.\n\n4- Release the safety handles and slowly lower the footplate towards your body by extending your legs.\n\n5- Pause briefly at the bottom of the movement, then push the footplate back up by flexing your legs.\n\n6- Repeat for the desired number of repetitions.\n\nSome tips to keep in mind:\n\n- Keep your back flat against the backrest throughout the exercise to avoid unnecessary strain on your lower back.\n- Avoid locking out your knees at the top of the movement to maintain tension in your leg muscles.\n- Exhale as you push the footplate away from your body and inhale as you lower it back down.\n- Use a weight that is challenging but allows you to perform the exercise with proper form.\n- If you experience any discomfort or pain, stop the exercise and consult a healthcare professional.\n\n\n"
+},
+{
+  "_id": {
+    "$oid": "6366c2405232be7d94049d3a"
+  },
+  "name": "Dumbbell one-leg split squat",
+  "active": false,
+  "category": "Legs & Calves",
+  "equipment": "dumbbell",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/22901301-Dumbbell-Bulgarian-Split-Squat-female_Thighs_360.gif?alt=media&token=42ea0c6a-cce9-4d07-94e4-849fdb9967ff",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "counter": 60,
+  "order": 11,
+  "type": "normal",
+  "description": "Beginner: 2-3 sets of 10-12 reps on each side\nIntermediate: 3-4 sets of 8-10 reps on each side\nAdvanced: 4-5 sets of 6-8 reps on each side",
+  "instructor": "1-Keeping your torso upright, inhale as you squat down with your supporting leg until either the knee of your supporting leg makes a 90-degree angle or the knee of your back leg nearly touches the floor.\n2-Exhale as you push yourself back up to the starting position.\n3-Repeat for more repetitions.\n4-Repeat the exercise with your opposite leg."
+},
+{
+  "_id": {
+    "$oid": "63bd2605ff18f7182d1928a4"
+  },
+  "name": "dumbbell romanian deadlift",
+  "counter": 60,
+  "type": "sub",
+  "active": true,
+  "category": "Core",
+  "equipment": "dumbbell",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/dumbbell-romanian-deadlift.gif?alt=media&token=1f457b31-6546-4ca9-8688-4b5f39c04631",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": null,
+  "inputType": "weight",
+  "description": "3 sets of 8-12 reps",
+  "instructor": "1-Begin by standing with your feet shoulder-width apart, holding a dumbbell in each hand with your palms facing your thighs.\n\n2-Engage your core, keep your back straight, and shift your weight onto your heels.\n\n3-Hinge at your hips and slowly lower the dumbbells towards the floor while keeping your knees slightly bent. Make sure to keep your back straight and avoid rounding your spine.\n\n4-Lower the weights until you feel a stretch in your hamstrings, and then reverse the movement by squeezing your glutes and hamstrings to stand up straight.\n\n5-Keep the weights close to your legs throughout the exercise and avoid any swinging or jerking motions.\n\n6-Repeat for the desired number of reps and sets.\n\n- Remember to start with lighter weights and gradually increase as you become comfortable with the exercise. Also, make sure to maintain proper form throughout the exercise to avoid injury and maximize the benefits."
+},
+{
+  "_id": {
+    "$oid": "63bd2921ff18f7182d1928ae"
+  },
+  "name": "Warm up - Hip Bridge",
+  "counter": 45,
+  "type": "warmup",
+  "active": false,
+  "category": "Legs & Calves",
+  "equipment": "body weight",
+  "bodyPart": "Glutes",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/30141301-Low-Glute-Bridge-on-floor-female_Hips_360.gif?alt=media&token=b9e9a969-06af-4541-8896-2c3a8bc0c98c",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 2,
+  "description": "Set: 1\nReps: 10-15",
+  "instructor": "1-Lie on your back with your knees bent and feet flat on the ground, hip-width apart.\n\n2-Place your arms by your sides, palms facing down.\n\n3-Engage your core muscles and press your lower back into the ground.\n\n4-Drive your heels into the ground and lift your hips up towards the ceiling, squeezing your glutes and engaging your core muscles.\n\n5-Hold for 1-2 seconds at the top of the movement, then lower your hips back down to the ground.\n\n*Remember to keep your core engaged throughout the exercise and avoid arching your lower back. Focus on using your glutes and hips to lift your body, rather than pushing up with your legs or lower back. By performing this exercise correctly, you can strengthen your glutes and hip muscles, which can help improve your posture and reduce the risk of lower back pain.\n"
+},
+{
+  "_id": {
+    "$oid": "63bd2a5aff18f7182d1928b2"
+  },
+  "name": "Decline Sit Up",
+  "counter": 60,
+  "type": "normal",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "dumbbell",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/decline-sit-up.gif?alt=media&token=5aae6895-8abf-41bc-ac32-a42e8845a49e",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 11,
+  "inputType": "rep",
+  "description": "3 sets of 10-12 reps per set",
+  "instructor": "Set the decline bench to an angle of between 30 and 45 degrees (the more than angle, the harder the situps will be).\nSit on the bench with your legs resting through the pads.\nCross your arms across your chest and lean back until your back almost touches the bench.\nRaise yourself back up until your upper body is vertical, then lower again."
+},
+{
+  "_id": {
+    "$oid": "63c113ecd098b0d57f4e1aea"
+  },
+  "name": "barbell bench press",
+  "counter": 60,
+  "type": "normal",
+  "active": false,
+  "category": "Chest & Triceps",
+  "equipment": "barbell",
+  "bodyPart": "Chest",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/barbell-bench-press.gif?alt=media&token=72c2db32-3e4d-4cf9-9634-f21d334d4b4c",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "description": "first set :10-12 reps\nsecond set : 8-10 reps\nThird set 3: 6-8reps \nweight increases reps decrease.",
+  "order": 4,
+  "instructor": "1-Start by lying down on a bench with your feet firmly planted on the ground and your back flat against the bench. Your head, shoulders, and butt should all be in contact with the bench.\n2-Grip the barbell with both hands, with your palms facing away from your body and your hands shoulder-width apart.\n3-Lift the barbell off the rack and hold it above your chest, with your arms fully extended.\n4-Lower the barbell towards your chest, keeping your elbows close to your body and your wrists straight.\n5-When the barbell reaches your chest, pause for a moment, and then press it back up to the starting position, fully extending your arms.\n6-Repeat for your desired number of reps.\nSome tips to keep in mind while performing a barbell bench press:\n\nKeep your feet firmly planted on the ground and your back flat against the bench throughout the exercise.\nUse a weight that is challenging but manageable for your fitness level.\nFocus on maintaining good form throughout the exercise, keeping your elbows close to your body and your wrists straight.\nBreathe in as you lower the barbell towards your chest and exhale as you press it back up.\nIf you experience any discomfort or pain while performing the exercise, stop immediately and consult a fitness professional.\n",
+  "superSet": false,
+  "superSetImage": "http://d205bpvrqc9yn1.cloudfront.net/0251.gif",
+  "superSetName": "chest dip",
+  "inputType": "weight"
+},
+{
+  "_id": {
+    "$oid": "63c11b8ed098b0d57f4e1afa"
+  },
+  "name": "Rowing ",
+  "sets": 1,
+  "counter": 120,
+  "description": "2 minutes",
+  "type": "warmup",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "equipment": "rowing",
+  "bodyPart": "Biseps",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/how-to-row.gif?alt=media&token=78355d91-f144-4d67-92a7-2576dea3a158",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 2,
+  "inputType": "timer",
+  "instructor": "1-Begin by sitting on the rowing machine with your feet securely fastened into the footrests and your hands holding onto the handles.\n\n2-Sit up straight with your shoulders relaxed and your core engaged.\n\n3-Push off the footrests with your legs and begin to pull the handles towards your chest, keeping your elbows close to your body.\n\n4-As you pull the handles towards your chest, lean back slightly, keeping your back straight and your abs engaged.\nOnce you've pulled the handles towards your chest, slowly extend your arms forward and bend your knees, sliding back towards the starting position.\n\n5-Repeat this movement, pushing off the footrests with your legs, pulling the handles towards your chest, and then extending your arms and bending your knees to slide back to the starting position.\n\nSome tips to keep in mind while using a rowing machine:\n\n- Keep your movements smooth and controlled, rather than jerky or sudden.\n- Focus on using your leg muscles to power the movement, rather than relying solely on your arms.\n- Maintain good posture throughout the exercise, keeping your shoulders relaxed and your back straight.\n-Experiment with different resistance levels and stroke rates to find a challenging workout that works for you.\n\n\n"
+},
+{
+  "_id": {
+    "$oid": "63c11cf20951bb4c22eff5c1"
+  },
+  "name": "Cool down - Standing Wall Biceps Stretch",
+  "description": "15-20 reps",
+  "type": "cooldown",
+  "active": false,
+  "category": "Legs & Calves",
+  "equipment": "body weight",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/standing-wall-biceps-stretch-611x1024.png?alt=media&token=a3f7194f-251d-4e2f-8f2b-7d73b0d28021",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "sets": 1,
+  "counter": 11,
+  "instructor": ""
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95741"
+  },
+  "bodyPart": "Chest",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/reverse-facing-push-ups.gif?alt=media&token=b629644b-cc2e-4280-831f-9011aaf27d34",
+  "id": 3294,
+  "name": "Reverse Facing Push-Ups",
+  "target": "pectorals",
+  "active": true,
+  "category": "Cheat & Triceps",
+  "counter": 60,
+  "description": "3 sets of 8-10 reps ",
+  "loc": "Home",
+  "type": "sub",
+  "instructor": "",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a9575a"
+  },
+  "bodyPart": "Chest",
+  "equipment": "leverage machine",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/chest-dip-movement.gif?alt=media&token=c1eb79db-a8e7-454c-97b6-400dc4e29ff4",
+  "id": 19,
+  "name": "assisted triceps dip",
+  "target": "triceps",
+  "category": "Upper body",
+  "loc": "Gym",
+  "type": "sub",
+  "active": true,
+  "description": "2-3 sets of 8-12 reps with a weight that provides appropriate assistance.",
+  "instructor": "Assisted triceps dips can also be performed using an assisted dip machine. Here's how to perform the exercise:\n\n1-Adjust the weight on the machine to a level that provides the appropriate amount of assistance for your fitness level.\n\n2-Stand on the footrests of the machine and grasp the handles with your hands, keeping your elbows close to your body.\n\n3-Lower your body down by bending your elbows, keeping your chest up and your shoulders down.\n\n4-Once your upper arms are parallel to the ground, push yourself back up to the starting position, squeezing your triceps muscles at the top of the movement.\n\n5-Repeat for the desired number of reps.\n\n*Remember to keep your core tight and your body upright throughout the exercise. You can adjust the weight on the machine to make the exercise easier or harder as needed. Also, be sure to use a weight that allows you to maintain proper form throughout the exercise.\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95785"
+  },
+  "bodyPart": "Triceps",
+  "equipment": "cable",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/cable-tricep-overhead-extensions.gif?alt=media&token=55f8fd61-c60f-4620-9095-7c336a2106ef",
+  "id": 998,
+  "name": "Overhead Cable Triceps Extension",
+  "target": "triceps",
+  "active": true,
+  "category": "Full body",
+  "counter": 60,
+  "description": "3 sets of 12 reps",
+  "loc": "Gym",
+  "type": "sub",
+  "instructor": "1-Stand with your feet shoulder-width apart and hold the band with both hands, keeping your palms facing down and your arms extended straight at your sides.\n\n2-Engage your core and keep your back straight as you lift the band up to shoulder height, making sure to keep your elbows tucked in at your sides.\n\n3-Slowly extend your arms out to the sides, keeping your elbows in the same position, until your arms are fully extended.\n\n4-Pause for a second, then slowly bring the band back to starting position, with your arms at your sides.\n\n5-Repeat for the desired number of reps, then switch sides.\n\n\nSome tips to keep in mind while performing the exercise:\n\n- Make sure to keep your elbows tucked in at your sides throughout the movement.\n- Use a band with enough resistance to challenge your muscles, but not so much that you can't maintain proper form.\n- Keep your movements slow and controlled, focusing on using your triceps to extend your arms.\n-Breathe steadily throughout the exercise, inhaling as you lift the band and exhaling as you extend your arms.\n\n\n\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a957f9"
+  },
+  "bodyPart": "Abs",
+  "equipment": "barbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/seated-overhead-press.gif?alt=media&token=efb8431b-bf3d-45e9-a813-161305447982",
+  "id": 94,
+  "name": "Push Pressing",
+  "target": "abs",
+  "active": true,
+  "category": "Core",
+  "loc": "Both",
+  "type": "sub",
+  "description": "3 sets of 8-10 reps",
+  "instructor": "",
+  "level": "beginner",
+  "order": 4
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a9573d"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/alternate-heel-touchers.gif?alt=media&token=09189012-31f3-41dc-b500-df90cbd21f2c",
+  "id": 6,
+  "name": "alternate heel touchers",
+  "target": "abs",
+  "active": true,
+  "category": "Back & Abs",
+  "counter": 45,
+  "loc": "Home",
+  "order": 9,
+  "inputType": "rep",
+  "type": "normal",
+  "description": "3 sets of 12-15 reps each side",
+  "instructor": "1-Lie on your back with your knees bent and your feet flat on the ground.\n\n2-Place your arms straight out to the sides of your body with your palms facing down.\n\n3-Engage your core muscles and lift your head and shoulders off the ground.\n\n4-Reach your left hand towards your left heel, while keeping your right shoulder off the ground.\n\n5-Lower your left shoulder and head back down to the ground.\n\n6-Repeat the same movement on the opposite side, reaching your right hand towards your right heel.\n\n7-Continue alternating sides for the desired number of reps.\n\n*Remember to keep your movements slow and controlled, avoid pulling your head with your hands, and engage your core muscles throughout the exercise. Also, make sure to breathe deeply and avoid holding your breath during the exercise. Additionally, if you experience any discomfort or pain, stop the exercise immediately and consult with a fitness professional.\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95868"
+  },
+  "bodyPart": "Abs",
+  "equipment": "cable",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/Standing-Cable-Crunch.gif?alt=media&token=13ddb92c-c592-493a-9283-bb02ada7a3d0",
+  "id": 175,
+  "name": "Standing cable crunch",
+  "target": "abs",
+  "active": true,
+  "category": "Back & Abs",
+  "counter": 45,
+  "loc": "Gym",
+  "order": 8,
+  "type": "normal",
+  "description": "3 sets of 10-12 reps per set",
+  "instructor": "Set the cable machine to a high position and attach a rope or handle to the cable.\nStand with your back to the machine with your feet shoulder-width apart.\nGrab the rope or handle with both hands, placing your hands near your ears or temples.\nTake a step or two away from the machine to create tension in the cable.\nPosition yourself so that your elbows are pointing out to the sides and your upper body is upright.\nInitiate the movement by bending at the waist and bringing your elbows and head downwards, towards your knees.\nAs you crunch down, focus on contracting your abdominal muscles and exhaling.\nHold the crunch position briefly, squeezing your abs.\nSlowly return to the starting position by extending your torso back up, allowing your arms to fully extend.\nRepeat for the desired number of repetitions.",
+  "level": "moderate"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a959ee"
+  },
+  "bodyPart": "Abs",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/side-plank-1024x593.png?alt=media&token=a1c6dd8a-b743-4739-8bfe-34548b173538",
+  "id": 3664,
+  "name": "Side Plank ",
+  "target": "upper back",
+  "active": true,
+  "category": "Back & Abs",
+  "loc": "Home",
+  "order": 4,
+  "inputType": "rep",
+  "type": "normal",
+  "description": "Beginner: 2 sets of 10-12 reps\nIntermediate: 3 sets of 8-10 reps\nAdvanced: 4-5 sets of 6-8 reps",
+  "instructor": "Lie on your right side with your legs straight and feet stacked on top of each other. ...\n1-With your neck neutral, breathe out and brace your core.\n2-Lift your hips off the mat so that you're supporting your weight on your elbow and the side of your right foot. ...\n3-Hold this position for the duration of the exercise.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a70"
+  },
+  "bodyPart": "Glutes",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/standing-figure-four-stretch.gif?alt=media&token=e05ee458-8c9c-4fb9-94a6-82c31d6f72e5",
+  "id": 1511,
+  "name": "Cool Down - Standing Figure Four Stretch",
+  "target": "hamstrings",
+  "active": false,
+  "category": "Legs & Calves",
+  "loc": "Both",
+  "type": "cooldown",
+  "description": "each side 1-2 times.Hold the stretch for 15-30 seconds, then release and switch sides.",
+  "order": 29,
+  "instructor": "1- Lie all the way down on your mat with your knees bent and the soles of the feet rooting down. \n2- Cross your right ankle over the left knee. \nInterlace your hands behind the left thigh. \n3- Hug the knee toward your chest. \n4- To take it deeper, gently press your right elbow into your right inner thigh as you flex the left foot. This will increase the stretch you feel in the glute and side of the hip. \n4- Stay here for 7 to 10 breaths and notice the physical sensations present. \n5- Before you move to figure-4 on the other side, lie all the way down with the legs extended and see if you can stay present with the release that happens in the hips. ",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a81"
+  },
+  "bodyPart": "Back",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/weighted-hyperextension.gif?alt=media&token=5db85b49-f99f-4020-861a-111f6b2a3a22",
+  "id": 489,
+  "name": "hyperextension",
+  "target": "spine",
+  "active": true,
+  "category": "Back & Abs",
+  "loc": "Gym",
+  "type": "normal",
+  "description": "3 sets of 12-15 reps",
+  "order": 9,
+  "counter": 45,
+  "instructor": "The hyperextension exercise targets the lower back muscles, particularly the erector spinae, as well as the glutes and hamstrings. Here's how to perform a hyperextension:\n\n1-Start by lying face down on a hyperextension bench with your feet secured under the footpads.\n2-Position the pad at the top of the bench just below your hips, so that your hips are just off the end of the bench.\n3-Cross your arms over your chest or place them behind your head.\n4-Engage your glutes and lower back muscles to lift your upper body up off the bench until your body is in a straight line.\n5-Pause for a moment at the top of the movement, and then slowly lower your body back down to the starting position.\n6-Repeat for your desired number of reps.\nSome tips to keep in mind while performing a hyperextension:\n\nUse a weight or resistance level that is challenging but manageable for your fitness level.\nKeep your movements slow and controlled, avoiding any sudden movements or jerking.\nFocus on engaging your lower back, glutes, and hamstrings throughout the exercise.\nBreathe in as you lower your body down towards the bench, and exhale as you lift your body up.\nIf you experience any discomfort or pain while performing the exercise, stop immediately and consult a fitness professional.\n\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a5e"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/lying-leg-raise.gif?alt=media&token=addb0e28-071a-4a12-9112-be6393b2f3c3",
+  "id": 2429,
+  "name": "Lying Leg Raise",
+  "target": "abs",
+  "active": true,
+  "category": "Back & Abs",
+  "counter": 41,
+  "loc": "Home",
+  "order": 8,
+  "inputType": "rep",
+  "type": "normal",
+  "description": "3 sets , 10-15 reps",
+  "instructor": "1- Lie on your back, legs straight and together.\n2- Keep your legs straight and lift them all the way up to the ceiling until your butt comes off the floor.\n3- Slowly lower your legs back down till they're just above the floor. Hold for a moment.\n4- Raise your legs back up. Repeat.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95bab"
+  },
+  "bodyPart": "Leg",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/Standing-Hip-Abduction-1.gif?alt=media&token=599926cf-823b-4abe-a155-9b0f815790f6",
+  "id": 710,
+  "name": "STANDING HIP ABDUCTION",
+  "target": "abductors",
+  "active": true,
+  "category": "Legs & Calves",
+  "counter": 45,
+  "description": "3-4 sets of 20-25 reps on each side",
+  "loc": "Home",
+  "order": 7,
+  "type": "normal",
+  "inputType": "rep",
+  "instructor": "",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b5a"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/body-saw-plank.gif?alt=media&token=6e9f4676-d633-4b37-a48e-b21ee689d3cf",
+  "id": 3665,
+  "name": "Body Saw Plank:",
+  "target": "abs",
+  "active": true,
+  "category": "Full body",
+  "description": "3 sets of 8-10 reps each side",
+  "loc": "Both",
+  "type": "sub",
+  "instructor": "1-Start in a high plank position, with your hands placed slightly wider than shoulder-width apart and your feet together.\n\n2-Lift your right arm off the ground and extend it straight out in front of you, while simultaneously lifting your left leg off the ground and extending it straight out behind you.\n\n3-Hold this position for 1-2 seconds, then return your right arm and left leg to the ground.\n\n4-Repeat on the other side, lifting your left arm and right leg off the ground and holding for 1-2 seconds.\n\n5-Continue alternating sides for 8-10 repetitions on each side.\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95c36"
+  },
+  "bodyPart": "Leg",
+  "equipment": "leverage machine",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/elliptical-muscles.gif?alt=media&token=dbc256fd-64a8-4f57-8883-db9fc7fa97b9",
+  "id": 2141,
+  "name": "walk elliptical cross trainer",
+  "target": "cardiovascular system",
+  "active": true,
+  "category": "cardio",
+  "description": "40-60 minutes",
+  "loc": "Gym",
+  "type": "normal"
+},
+{
+  "_id": {
+    "$oid": "647f315452490e81f1ba6cc4"
+  },
+  "name": "test",
+  "order": 12,
+  "description": "test",
+  "type": "normal",
+  "active": false,
+  "category": "Core",
+  "equipment": "leverage machine",
+  "bodyPart": "Triceps",
+  "instructor": "test",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/3_4%20sit-up%20(3).gif?alt=media&token=f9f000a9-bc7a-4497-8ec1-fdc2cde88be4",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64802f38a563d58abffb9ff5"
+  },
+  "name": "sd",
+  "counter": 12,
+  "order": 12,
+  "description": "wqwq",
+  "type": "normal",
+  "active": false,
+  "equipment": "assisted",
+  "bodyPart": "Chest",
+  "instructor": "w",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/butterfly-yoga-pose.gif?alt=media&token=7f77d4f9-82ce-40a3-86cb-30c0e921cc99",
+  "level": "moderate",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6360db542adb98c1ac717890"
+  },
+  "name": "Dumbell floor Press",
+  "active": true,
+  "equipment": "body weight",
+  "bodyPart": "Chest",
+  "level": "beginner",
+  "category": "Chest & Triceps",
+  "gifUrl": "https://backend.fitlinez.com/appgifs/dumbbell-floor-press.gif",
+  "loc": "Both",
+  "__v": 0,
+  "order": null,
+  "type": "normal",
+  "inputType": "weight",
+  "counter": null,
+  "description": "Beginner:\nSet: 1-2 , Reps: 8-10 per set\nIntermediate:\nSet: 2-3 , Reps: 10-15 per set\nAdvanced:\nSet: 3-4,Reps: 15-20 per set",
+  "instructor": "Lie face up on the floor holding two dumbbells at chest height. Press up as if you were on a normal bench until your arms are fully extended. Then slowly lower back to the starting postion. Expert tips: To focus on your triceps, keep your elbows near your torso."
+},
+{
+  "_id": {
+    "$oid": "6366b7245232be7d94049d28"
+  },
+  "name": "Barbell bench press",
+  "active": true,
+  "category": "Chest & Triceps",
+  "equipment": "barbell",
+  "bodyPart": "Chest",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/image_iphone.jpg?alt=media&token=9580a17f-66bf-4bae-b93e-1a898ea60a1a",
+  "level": "moderate",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 6,
+  "counter": 60,
+  "description": "set 1 : 10-12 reps\nset 2 : 8-10 reps\nset 3 : 6-8 reps\ngradually increasing the weight with each set while decreasing the number of reps",
+  "instructor": "The barbell bench press is a popular exercise for targeting the chest, shoulders, and triceps. Here are the steps to perform the barbell bench press:\n\n1-Lie flat on a bench with your feet firmly on the ground and your back pressed against the bench.\n\n2-Grip the barbell with your hands slightly wider than shoulder-width apart, palms facing away from your body.\n\n3-Unrack the barbell and bring it down towards your chest, keeping your elbows close to your body and your shoulders down and back.\n\n4-Push the barbell back up towards the starting position, fully extending your arms.\n\n5-Repeat the movement for your desired number of repetitions.\n\n*It's important to keep your back flat on the bench, engage your core, and use proper form to avoid injury. Additionally, make sure to use a weight that you can lift comfortably without straining your muscles. If you're new to the exercise, start with lighter weights and gradually increase the weight as you become more comfortable and confident with the movement.",
+  "type": "normal"
+},
+{
+  "_id": {
+    "$oid": "6366bb3d5232be7d94049d30"
+  },
+  "name": "Triceps Extensions",
+  "active": true,
+  "category": "Chest & Triceps",
+  "equipment": "dumbbell",
+  "bodyPart": "Triceps",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/tricep-overhead-extensions.gif?alt=media&token=bd75aa87-331d-4a83-b087-dca0ddbad1c5",
+  "level": "moderate",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 2,
+  "description": "set 1 : 10-12 reps\nset 2 : 8-10 reps \nset 3 : 6-8 reps\nweight increases reps decrease.\n",
+  "type": "normal",
+  "instructor": ""
+},
+{
+  "_id": {
+    "$oid": "63bd273fff18f7182d1928a8"
+  },
+  "name": "Captain’s Chair Leg Raise",
+  "counter": 45,
+  "type": "normal",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "body weight",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/captains-chair-leg-raise.gif?alt=media&token=71423671-aaa9-46e1-aa1a-ea519e3952c7",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 10,
+  "inputType": "rep",
+  "description": "2-3 sets of 8-10 reps per set",
+  "instructor": "Inhale and engage your abdominal muscles to prepare for the leg lift.\nBend your knees slightly and raise your legs upward until your quads are parallel to the ground.\nLower your legs in a controlled movement, exhaling as you go, until you're back in the starting position. Keep your core engaged."
+},
+{
+  "_id": {
+    "$oid": "63bd278cff18f7182d1928aa"
+  },
+  "name": "Plank Arm Lifts",
+  "counter": 45,
+  "type": "normal",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "body weight",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-plank-arm-lifts.gif?alt=media&token=3444f5ba-49ec-4ad9-af2e-3dff82d24e0e",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 9,
+  "description": "3 sets of 20-40 seconds per side",
+  "instructor": "Begin in a high plank position on your hands and feet with the hands directly under the shoulders. Be on your toes with the feet hip distance apart. Have your spine in a straight line from head-to-toe.\n\nLift one arm straight forward with the thumb up until it is in line with the rest of your body. Be sure to maintain a neutral spine and avoid any twisting in the rest of your body.\n\nThen, lower that hand back down to the ground.\n\nRepeat for the desired repetitions, alternating arms.\n\nCommon Mistakes\nA common mistake is allowing the back to arch. Instead, focus on keeping the spine in its neutral curvature. Pull the belly button up toward the spine to engage the abs and avoid lower back arching. Then as you raise an arm, squeeze the glutes to avoid any hip rotation.\n\n",
+  "timer": true
+},
+{
+  "_id": {
+    "$oid": "63bd281dff18f7182d1928ac"
+  },
+  "name": "Warm Up - Flutter Kicks",
+  "type": "warmup",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "body weight",
+  "bodyPart": "Abs",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/scissor-kicks.gif?alt=media&token=379991e5-209b-4415-a2ac-039d06d8a4bf",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 1,
+  "inputType": "rep",
+  "description": "Set: 1 \nReps: 20-30 seconds",
+  "instructor": "1-Lie down on your back with your legs straight out in front of you and your arms by your sides.\n\n2-Engage your core muscles and lift your legs a few inches off the ground. Your lower back should remain in contact with the floor.\n\n3-Alternately raise and lower your legs rapidly in a scissor-like motion. Keep your toes pointed and your legs straight.\n\n4-Continue for the desired number of repetitions or time.\n\n*When performing flutter kicks, it's important to maintain proper form. Avoid arching your lower back and keep your core engaged throughout the exercise. You can modify the exercise by placing your hands under your glutes to support your lower back or by bending your knees slightly if you have trouble keeping your legs straight. You can also increase the difficulty of the exercise by holding a medicine ball or weight between your feet."
+},
+{
+  "_id": {
+    "$oid": "63c11546d098b0d57f4e1aec"
+  },
+  "name": "Cable Pulldown",
+  "counter": 60,
+  "description": "3 sets of 10-15 reps",
+  "type": "normal",
+  "active": true,
+  "category": "Back & Abs",
+  "equipment": "cable",
+  "bodyPart": "Back",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/wide-grip-lat-pulldown.gif?alt=media&token=76ce2193-e178-416d-b061-ab3011cfd674",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 5,
+  "instructor": "The cable pulldown machine is a popular exercise that targets the back muscles, specifically the latissimus dorsi (lats). Here's how to perform a cable pulldown:\n\n1-Start by sitting at the cable pulldown machine with your feet flat on the ground and your knees slightly bent.\n2-Grip the bar with both hands, with your palms facing away from your body and your hands shoulder-width apart.\n3-Lean back slightly, and engage your core to maintain good posture.\n4-Pull the bar down towards your chest, bringing your elbows down and back towards your sides.\n5-Pause for a moment when the bar is at chest level, and then slowly release it back up to the starting position.\n\n\nSome tips to keep in mind while performing a cable pulldown:\nUse a weight that is challenging but manageable for your fitness level.\nKeep your movements smooth and controlled, avoiding any jerking or sudden movements.\nFocus on engaging your lats throughout the exercise, rather than relying solely on your arms.\nBreathe in as you pull the bar down towards your chest, and exhale as you release it back up.\nIf you experience any discomfort or pain while performing the exercise, stop immediately and consult a fitness professional.\n"
+},
+{
+  "_id": {
+    "$oid": "63c11a3ed098b0d57f4e1af8"
+  },
+  "name": "Warm up - Elbow Circles",
+  "counter": 45,
+  "description": "1 set , 20-30 reps each leg",
+  "type": "warmup",
+  "active": true,
+  "inputType": "rep",
+  "category": "Shoulders & Biceps",
+  "equipment": "body weight",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/elbow-circles.gif?alt=media&token=01847738-abcb-4043-ab82-d9ddfa4418c7",
+  "level": "beginner",
+  "loc": "Both",
+  "__v": 0,
+  "order": 1,
+  "instructor": "",
+  "superSet": "Super Set"
+},
+{
+  "_id": {
+    "$oid": "63c11c760951bb4c22eff5bf"
+  },
+  "name": "Frog Stretch",
+  "description": "each legs, 45 sec",
+  "type": "cooldown",
+  "active": true,
+  "category": "Legs & Calves",
+  "equipment": "body weight",
+  "bodyPart": "Glutes",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/butterfly-yoga-pose.gif?alt=media&token=fa074abc-821b-478c-8dcf-35a5d49ae5d6",
+  "level": "beginner",
+  "loc": "Both",
+  "inputType": "rep",
+  "__v": 0,
+  "order": 11,
+  "instructor": ""
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95739"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/tuck-crunch.gif?alt=media&token=6589b537-f99a-4a6d-85d9-9c97956f7857",
+  "id": 1,
+  "name": "Tuck Crunch",
+  "target": "abs",
+  "active": true,
+  "category": "Core",
+  "loc": "Both",
+  "type": "sub",
+  "description": "3 sets of 10-12 reps ",
+  "instructor": "",
+  "counter": 60,
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a9573c"
+  },
+  "bodyPart": "Leg",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/quadriceps-stretch.gif?alt=media&token=3e0cc996-e87b-4591-b9ac-609e57fbadcc",
+  "id": 1512,
+  "name": "cool down - Standing Quad Stretch",
+  "target": "quads",
+  "active": true,
+  "category": "Legs & Calves",
+  "loc": "Both",
+  "order": 15,
+  "type": "cooldown",
+  "inputType": "timer",
+  "counter": null,
+  "description": "1-2 sets,Hold the stretch for 15-30 seconds, then slowly return to the starting position",
+  "instructor": "1-Stand up tall and shift your weight to the right leg.\n2-Lift your left foot and grasp it with your left hand.\n3-Pull the left foot toward your butt until you feel the stretch in your quads.\n4-Hold the stretch for 30 seconds and repeat with the right leg.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95842"
+  },
+  "bodyPart": "Leg",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-mountain-climbers.gif?alt=media&token=a5e0fad2-c459-4c0f-8774-0aa3df018b3d",
+  "id": 2466,
+  "name": "mountain climber",
+  "target": "abs",
+  "active": true,
+  "category": "Full body",
+  "counter": 45,
+  "description": "3 sets of 10-12 reps ",
+  "loc": "Both",
+  "inputType": "rep",
+  "type": "sub",
+  "instructor": "1-Lie flat on your back with your knees bent and your feet flat on the ground.\n\n2-Lift your hips up towards the ceiling, keeping your feet and shoulders pressed into the ground.\n\n3-Hold the bridge position as you bring your right knee towards your chest and your left hand towards your right knee, crossing your body.\n\n4-Return your right foot to the starting position and repeat on the other side, bringing your left knee towards your chest and your right hand towards your left knee, crossing your body.\n\n5-Continue alternating sides for 10-12 repetitions.\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a62"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/push-up-with-rotation.gif?alt=media&token=cb1367c6-c133-47de-853d-1d25e2c6a887",
+  "id": 464,
+  "name": "Push-up with Rotation",
+  "target": "abs",
+  "active": false,
+  "category": "Back & Abs",
+  "description": "3 sets of 5-8 reps (5-8 reps on each side) with a 10-15 second hold on each twist",
+  "loc": "Home",
+  "order": 6,
+  "type": "normal",
+  "instructor": "1-Begin in a high plank position with your hands directly under your shoulders and your feet hip-width apart.\n\n2-Engage your core and keep your body in a straight line from your head to your heels.\n\n3-Rotate your body to the right by lifting your right hand off the ground and twisting your torso. Keep your feet and left hand in the same position.\n\n4-Hold the twist for a few seconds, then return to the starting position.\n\n5-Repeat the twist on the other side by lifting your left hand off the ground and twisting your torso to the left.\n\n6-Alternate between sides for your desired number of reps or time.\n\nRemember to maintain proper form throughout the exercise by keeping your body in a straight line and engaging your core. Also, try to rotate your torso as much as possible without lifting your hips or allowing your shoulders to collapse.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95ab1"
+  },
+  "bodyPart": "Leg",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-kettlebell-goblet-squats.gif?alt=media&token=eb1de690-56ad-405e-81f7-c00538210a8b",
+  "id": 534,
+  "name": "kettlebell goblet squat",
+  "target": "glutes",
+  "active": true,
+  "category": "Legs & Calves",
+  "description": "Beginner: 2-3 sets of 10-12 reps\nIntermediate: 3-4 sets of 8-10 reps\nAdvanced: 4-5 sets of 6-8 reps\nFocus on maintaining good form and slowly increasing the weight and reps over time.",
+  "loc": "Home",
+  "order": 5,
+  "type": "normal",
+  "instructor": "1-Stand with your feet hip-width apart and hold a kettlebell with both hands, bringing it up to your chest.\n2-Keep your elbows close to your body and your shoulders down and relaxed.\n3-Engage your core and keep your chest lifted.\n4-Lower your body down into a squat, bending your knees and pushing your hips back as if you're sitting in a chair.\n5-Keep your weight in your heels and your knees in line with your toes.\n6-Lower down until your thighs are parallel to the ground, or as low as you can while maintaining good form.\n7-Pause briefly at the bottom of the squat.\n8-Push through your heels to rise back up to standing, squeezing your glutes at the top.\n9-Repeat for 8-12 reps, or as many as you can with good form.\n10-Aim to perform 2-3 sets of goblet squats.\n11-Remember to breathe throughout the exercise and to keep your core engaged to protect your lower back.\n\nNote: If you experience any pain or discomfort in your knees or lower back, decrease the depth of your squat or choose a lighter weight. You can also try placing a block or a rolled-up towel under your heels to assist with the squat movement.\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b78"
+  },
+  "bodyPart": "Leg",
+  "equipment": "resistance band",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/resistance-band-leg-press.gif?alt=media&token=e0fc5f51-6ecc-496d-9776-28a9cc4d730d",
+  "id": 3007,
+  "name": "Resistance Band Leg Press",
+  "target": "quads",
+  "active": true,
+  "category": "Legs & Calves",
+  "loc": "Home",
+  "type": "normal",
+  "inputType": "rep",
+  "counter": 60,
+  "order": 6,
+  "description": " 3-4 sets x 15 reps per leg",
+  "instructor": "",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b3b"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-mountain-climbers.gif?alt=media&token=eb92cfd1-f0bf-417c-ada0-b75940fbbddd",
+  "id": 630,
+  "name": "mountain climber",
+  "target": "cardiovascular system",
+  "active": true,
+  "category": "Back & Abs",
+  "counter": 45,
+  "instructor": "1-Start in a high plank position, with your hands directly under your shoulders and your feet hip-width apart.\n2-Engage your core and draw your right knee in toward your chest, keeping your foot off the ground.\n3-Quickly switch legs, jumping your right leg back and bringing your left knee in toward your chest.\n4-Continue alternating legs at a quick pace, as if you're running in place.\n5-Keep your hips level and your shoulders stacked over your wrists throughout the movement.\n6-Aim to perform the exercise for 30-60 seconds, or as many reps as you can in that time frame.\n7-To modify the exercise, you can perform the movement at a slower pace, or step your feet in and out instead of jumping.\n8-Remember to breathe throughout the exercise and to keep your core engaged to protect your lower back.\n\nNote: Mountain Climbers are a high-intensity exercise that may not be suitable for everyone. If you have any injuries or health concerns, be sure to consult with a healthcare professional before attempting the exercise.\n\n",
+  "loc": "Home",
+  "order": 3,
+  "type": "warmup",
+  "description": "3 sets of 12-15 reps ",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95c17"
+  },
+  "bodyPart": "Leg",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-cat-cow-pose.gif?alt=media&token=06f844bb-7e25-4275-87f1-e3708131869f",
+  "id": 798,
+  "name": "Cat Cow Pose",
+  "target": "cardiovascular system",
+  "active": true,
+  "category": "Legs & Calves",
+  "description": "5-10 minutes",
+  "loc": "Both",
+  "order": 0,
+  "inputType": "rep",
+  "type": "warmup",
+  "instructor": "1- Begin in a quadruped pose on your hands and knees. Have the hands directly under the shoulders with fingers facing forward and the knees directly under the hips. Start with a neutral spine and abs engaged.\n\n2- Begin by rounding the spine as if an angry cat would by tipping the pelvis under, rounding the upper and lower back, and dropping the hand down. Make a C-curve and get as rounded as you can by drawing the abs up toward the spine during an exhale.\n\n3- Then inhale to reverse the pose into a cow pose as you tilt the pelvis up, arch the lower and upper back, and look up.\n\n4- Relax back to a neutral spine and continue alternating cat and cow with your breath for the desired reps.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "64802c849f0816f71ecfde87"
+  },
+  "name": "test",
+  "counter": 12,
+  "order": 2,
+  "type": "warmup",
+  "active": false,
+  "category": "Lower body",
+  "equipment": "leverage machine",
+  "bodyPart": "Chest",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-dumbbell-curtsy-lunges.gif?alt=media&token=c3c04bfd-f7c5-4a23-be70-a313b7d7580a",
+  "level": "beginner",
+  "loc": "Home",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6366c3b95232be7d94049d3e"
+  },
+  "name": "lever seated leg curl",
+  "active": true,
+  "category": "Legs & Calves",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/seated-leg-curl.gif?alt=media&token=31705fae-cb2c-4313-9027-6e111da83d63",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "equipment": "leverage machine",
+  "order": 10,
+  "type": "normal",
+  "description": "Beginner: 2-3 sets of 10-12 reps\nIntermediate: 3-4 sets of 8-10 reps\nAdvanced: 4-5 sets of 6-8 reps",
+  "instructor": "1- Sit on the lever seated leg curl machine with your back straight and your legs extended in front of you.\n\n2- Adjust the machine so that the footpad is positioned just above your heels.\n\n3- Adjust the weight to a level that is challenging but allows you to maintain proper form throughout the exercise.\n\n4- Place your hands on the side handles and brace your core.\n\n5- Slowly bend your knees, lifting your heels towards your buttocks, while keeping your thighs on the seat.\n\n6- Pause briefly at the end of the movement, then slowly return your legs back to the starting position, keeping your movements controlled.\n\nSome tips to keep in mind:\n\n- Keep your back straight and your core engaged throughout the exercise to avoid unnecessary strain on your lower back.\n- Focus on using your hamstrings to lift the weight and avoid using momentum or swinging your legs.\n- Exhale as you lift your heels towards your buttocks and inhale as you return them back to the starting position.\n- Use a weight that is challenging but allows you to maintain proper form throughout the exercise."
+},
+{
+  "_id": {
+    "$oid": "63c11612d098b0d57f4e1aee"
+  },
+  "name": "Barbell full squat",
+  "counter": 90,
+  "description": "3 sets of 6-10 reps",
+  "type": "normal",
+  "active": true,
+  "category": "Legs & Calves",
+  "equipment": "barbell",
+  "bodyPart": "Leg",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/full-squat-side-view.gif?alt=media&token=2e02cad2-78c0-4ed7-a7d5-7c6062cd777d",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 6,
+  "instructor": "The barbell full squat is a compound exercise that targets the lower body, including the quads, glutes, and hamstrings. Here's how to perform a barbell full squat:\n\n1-Start by standing with your feet shoulder-width apart, with the barbell resting on your upper back.\n\n2-Grip the bar with both hands, keeping your elbows pointing down and your wrists straight.\n\n3-Keeping your chest up and your core engaged, bend your knees and lower your hips down towards the ground.\n\n4-Lower yourself down until your thighs are parallel to the ground or lower, making sure to keep your knees in line with your toes.\n\n5-Pause for a moment in the bottom position, and then push through your heels to stand back up to the starting position.\n\n6-Repeat for your desired number of reps.\n\nSome tips to keep in mind while performing a barbell full squat:\n\n- Use a weight that is challenging but manageable for your fitness level.\n- Keep your chest up and your core engaged throughout the exercise.\n- Focus on pushing through your heels as you stand back up to the starting position.\n- Keep your knees in line with your toes throughout the exercise to avoid any undue stress on your knees.\n- Breathe in as you lower yourself down into the squat, and exhale as you stand back up.\n- If you experience any discomfort or pain while performing the exercise, stop immediately and consult a fitness professional.\n"
+},
+{
+  "_id": {
+    "$oid": "63c1171cd098b0d57f4e1af0"
+  },
+  "name": "smith seated shoulder press",
+  "counter": 60,
+  "description": "3 sets of 5-8 reps",
+  "type": "normal",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "equipment": "smith",
+  "bodyPart": "Shoulder",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/Smith-Machine-Shoulder-Press.gif?alt=media&token=bdde8a14-f107-48ee-befc-a36bab5b9b3d",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 7,
+  "instructor": "1-Start by adjusting the seat height of the Smith machine so that the bar is at shoulder height when you are seated.\n2-Sit on the bench and position yourself underneath the bar, with your feet flat on the ground and your back against the bench.\n3-Grip the bar with both hands, with your palms facing away from your body and your hands shoulder-width apart.\n4-Lift the bar off the rack and hold it in front of your shoulders, with your elbows pointing down and your wrists straight.\n5-Push the bar up and away from your body, extending your arms fully.\n6-Pause for a moment at the top of the movement, and then slowly lower the bar back down to the starting position.\n7-Repeat for your desired number of reps.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c117efd098b0d57f4e1af2"
+  },
+  "name": "cable triceps pushdown ",
+  "counter": 45,
+  "description": "3 sets of 8-12 reps",
+  "type": "normal",
+  "active": true,
+  "category": "Chest & Triceps",
+  "equipment": "cable",
+  "bodyPart": "Triceps",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/cable-pushdown.gif?alt=media&token=b1cbfbcd-85ae-43fc-b8c9-044f36385c66",
+  "level": "beginner",
+  "loc": "Gym",
+  "__v": 0,
+  "order": 8,
+  "instructor": "1-Start by standing in front of the cable machine with your feet shoulder-width apart and your core engaged.\n2-Attach a straight bar to the high pulley of the cable machine.\n3-Grip the bar with an overhand grip, with your hands shoulder-width apart and your elbows tucked in close to your sides.\n4-Keeping your upper arms stationary, push the bar down towards your thighs, extending your arms fully.\n5-Pause for a moment at the bottom of the movement, and then slowly release the bar back up to the starting position.\n6-Repeat for your desired number of reps.\n"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a9585d"
+  },
+  "bodyPart": "Triceps",
+  "equipment": "cable",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/overhead-cable-tricep-extension.gif?alt=media&token=0d7847b1-eb6b-44c0-b631-0fe027f43c90",
+  "id": 1722,
+  "name": "cable high pulley overhead tricep extension",
+  "target": "triceps",
+  "active": true,
+  "category": "Full body",
+  "counter": 60,
+  "description": "3 sets of 12 reps",
+  "loc": "Gym",
+  "type": "sub",
+  "instructor": "1-Set up a cable machine with the rope attachment on the high pulley. Grab the rope with both hands and stand facing away from the machine.\n\n2-Keep your feet shoulder-width apart and step forward to create tension in the cable. Bring your hands up to the sides of your head, with your elbows pointing forward and your palms facing inwards.\n\n3-Engage your core and keep your elbows pointing forward as you extend your arms upwards, straightening them out until your hands are above your head.\n\n4-Pause for a second, then slowly lower your hands back down to the starting position, with your elbows pointing forward and your hands at the sides of your head.\n\n5-Repeat for the desired number of reps.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a958f4"
+  },
+  "bodyPart": "Biseps",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/02591301-Close-Grip-Push-up_Upper-Arms_360.gif?alt=media&token=9e097f83-88f6-48e2-8c2d-9fb19767892d",
+  "id": 2398,
+  "name": "close-grip push-up (on knees)",
+  "target": "triceps",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "description": "3 sets of 8-12 reps",
+  "loc": "Both",
+  "order": 4,
+  "inputType": "rep",
+  "type": "normal",
+  "instructor": "The close-grip push-up is a variation of the traditional push-up that targets the triceps, chest, and shoulders. Here's how to perform the exercise on your knees:\n\n1-Start on all fours on a yoga mat or a soft surface, with your knees hip-width apart and your hands shoulder-width apart, directly under your shoulders.\n2-Walk your hands closer together so that your thumbs and index fingers are touching to create a diamond shape between your hands.\n3-Extend your legs behind you, keeping your knees on the ground.\n4-Engage your core and keep your body in a straight line from your head to your knees.\n5-Lower your body down toward the ground, bending your elbows and keeping them close to your sides.\n6-Pause when your chest is a few inches away from the ground.\n7-Push back up to the starting position, extending your arms.\n8-Aim to perform 2-3 sets of 8-12 repetitions, or as many as you can with good form.\n9-Remember to breathe throughout the exercise and to keep your core engaged to protect your lower back.\n\nNote: If you experience any pain or discomfort in your wrists or shoulders, modify the exercise by performing it on an elevated surface, such as a bench or step. You can also perform the exercise with your hands on dumbbells to decrease the strain on your wrists.\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95919"
+  },
+  "bodyPart": "Biseps",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-dumbbell-bicep-curls.gif?alt=media&token=1fb56510-6a2c-4fcf-880f-ce78d4167fab",
+  "id": 294,
+  "name": "dumbbell biceps curl",
+  "target": "biceps",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "counter": 60,
+  "description": "2-3 sets of 6-8 reps (using cans or water bottles as weights)",
+  "loc": "Home",
+  "order": 9,
+  "type": "normal",
+  "instructor": "1-Stand with your feet shoulder-width apart and hold a dumbbell in each hand with your palms facing forward.\n\n2-Keep your elbows close to your body and your back straight.\n\n3-Curl the dumbbells up towards your shoulders by bending your elbows and contracting your biceps.\n\n4-Keep your wrists straight and avoid swinging your arms or using momentum.\n\n5-Pause briefly at the top of the movement, then slowly lower the dumbbells back to the starting position.\n\n6-Repeat for your desired number of reps.\n\n7-It's important to choose a weight that challenges you but allows you to maintain proper form throughout the exercise.\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a959e7"
+  },
+  "bodyPart": "Triceps",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/03871301-Dumbbell-Seated-Alternate-Front-Raise_Shoulders_360.gif?alt=media&token=62879068-7a9c-4d7b-b459-f2e718d4887f",
+  "id": 1738,
+  "name": "Seated alternating dumbbell front raise",
+  "target": "triceps",
+  "active": true,
+  "category": "Chest & Triceps",
+  "description": "3 sets of 8-10 reps ,each arm",
+  "loc": "Home",
+  "order": 8,
+  "type": "normal",
+  "instructor": "",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95ab3"
+  },
+  "bodyPart": "Leg",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/how-to-do-a-kettlebell-split-squat.gif?alt=media&token=78ca0cd5-7ab4-41ff-b7d0-89eddf81a042",
+  "id": 536,
+  "name": "kettlebell lunge pass through",
+  "target": "glutes",
+  "active": true,
+  "category": "Full body",
+  "counter": 60,
+  "description": "3 sets of 8-10 reps each side",
+  "loc": "Both",
+  "type": "sub",
+  "instructor": "1-Hold a kettlebell in both hands at chest height, with your elbows bent and your palms facing each other.\n\n2-Step forward with your right foot into a lunge position, bending your right knee and keeping your left leg straight.\n\n3-As you lunge forward, pass the kettlebell under your right thigh to your left hand.\n\n4-As you stand back up from the lunge position, pass the kettlebell back over your left shoulder to your right hand.\n\n5-Repeat the lunge on the other side, stepping forward with your left foot and passing the kettlebell under your left thigh to your right hand.\n\n6-Continue alternating sides for 8-10 repetitions on each side.\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a959f1"
+  },
+  "bodyPart": "Glutes",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/anim-dumbbell-deadlifts.gif?alt=media&token=e1c7956b-9761-4600-b683-fd5e7d073e44",
+  "id": 1757,
+  "name": "Dumbbell Deadlifts",
+  "target": "glutes",
+  "active": true,
+  "category": "Legs & Calves",
+  "counter": 87,
+  "description": "3 sets of 10-12 reps per leg",
+  "loc": "Home",
+  "order": 6,
+  "type": "normal",
+  "instructor": "1-Begin standing with the dumbbells placed between your feet. Have the feet about hip distance apart and hold a dumbbell in each hand with the arms straight.\n\n2-Assume a hinge position as you push the hips back, bend the knees slightly, and engage your abdominals to keep a neutral spine.\n\n3-Pull the shoulder blades down and back to engage the lats.\n\n4-Then, straighten the legs as you raise the dumbbells straight up off the ground while keeping them close to your shins and thighs.\n\n5-Once your legs are straight, lower the dumbbells back down to the ground using control and re-assume the hinge position.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a959fd"
+  },
+  "bodyPart": "Biseps",
+  "equipment": "barbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/barbell-preacher-curl.gif",
+  "id": 416,
+  "name": "Barbell Preacher Curl",
+  "target": "biceps",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "description": "3 sets of 10-12 reps",
+  "loc": "Gym",
+  "type": "sub",
+  "instructor": "",
+  "inputType": "weight",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa00098f9e5a959fd"
+  },
+  "bodyPart": "Biseps",
+  "equipment": "barbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/barbell-preacher-curl.gif",
+  "id": 888,
+  "name": "Back Slaps Wrap",
+  "target": "biceps",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "description": "3 sets of 10-12 reps",
+  "loc": "Home",
+  "type": "sub",
+  "instructor": "Begin standing with the feet hip distance apart and arms down at your side. Then raise the arms up to shoulder height with the palms facing down. Have a slight bend in the elbows.While maintaining the arms at shoulder height, swing them in front of you as they cross over one another.Then swing the back behind you as you open up the chest. Continue alternating as you swing the arms forward and backward for this dynamic mobility stretch.",
+  "inputType": "rep",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a14"
+  },
+  "bodyPart": "Shoulder",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/dumbbell-front-raise.gif?alt=media&token=bcdab12a-059c-4bcc-aed4-9a19a03ee629",
+  "id": 433,
+  "name": "Front Raises",
+  "target": "pectorals",
+  "active": true,
+  "category": "Shoulders & Biceps",
+  "loc": "Home",
+  "type": "normal",
+  "counter": 58,
+  "order": 2,
+  "description": "For beginners: 2-3 sets of 8-10 reps per set\nFor intermediate lifters: 3-4 sets of 10-12 reps per set\nFor advanced lifters: 4-5 sets of 12-15 reps per set",
+  "instructor": "",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95a9b"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/how-to-do-a-kettlebell-russian-twist.gif?alt=media&token=2b1fb8a9-918d-4ff7-8cfd-2439b44d1e99",
+  "id": 507,
+  "name": "Russian Twists",
+  "target": "abs",
+  "active": true,
+  "category": "Core",
+  "loc": "Both",
+  "type": "sub",
+  "description": "3 sets of 10-12 reps",
+  "instructor": "",
+  "counter": 60,
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c4329fa0009819e5a95acb"
+  },
+  "bodyPart": "Abs",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/knee-touch-crunch.gif?alt=media&token=71d096e4-a1ab-4740-be03-1ed9de7f07da",
+  "id": 3640,
+  "name": "knee touch crunch",
+  "target": "abs",
+  "active": true,
+  "category": "Core",
+  "counter": 57,
+  "loc": "Both",
+  "order": null,
+  "type": "sub",
+  "description": "3-4 sets of 12-15 reps",
+  "instructor": "1-Lie flat on your back on a mat or a comfortable surface with your knees bent and feet flat on the floor.\n\n2-Place your hands behind your head, keeping your elbows out to the side.\n\n3-Engage your core muscles and lift your head, neck, and shoulders off the ground.\n\n4-Bring your right elbow towards your left knee, while keeping your right leg extended out straight and slightly lifted off the ground.\n\n5-Lower your head, neck, and shoulders back down to the ground and then repeat the same movement with your left elbow towards your right knee.\n\n6-Alternate back and forth between your right and left elbow while engaging your core muscles throughout the exercise.\n\n7-Complete the desired number of reps and sets.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b4d"
+  },
+  "bodyPart": "Abs",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/reverse-crunch.gif?alt=media&token=c65cef1e-81ad-4b4d-991e-a096f40a93eb",
+  "id": 641,
+  "name": "barbell rollout",
+  "target": "abs",
+  "active": false,
+  "category": "Back & Abs",
+  "loc": "Both",
+  "type": "normal",
+  "counter": 45,
+  "order": 12,
+  "inputType": "rep",
+  "description": "3 sets of 8-10 reps per set",
+  "instructor": "1- Load the barbell with either a 25 or 45-lb plate on each side.\n2- Get into a kneeling position and grip the bar about shoulder width.\n3- Keep your core tight and back straight then push the barbell out until you’re in a Superman position. Keep your arms completely straight during the entire movement. Don’t drop your hips down. \n4- Use your core to pull the weight back toward your knees and repeat.",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95ba7"
+  },
+  "bodyPart": "Chest",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/knee-push-ups.gif?alt=media&token=0e541744-7199-4eb5-88a7-044ac83cbe19",
+  "id": 699,
+  "name": "Knee-Ups",
+  "target": "pectorals",
+  "active": true,
+  "category": "Chest & Triceps",
+  "counter": 45,
+  "loc": "Home",
+  "order": 9,
+  "type": "normal",
+  "description": "2-4 sets of 8-12 reps per set.",
+  "instructor": "1-Start in a plank position with your hands shoulder-width apart and your feet together.\n\n2-Lower your body towards the ground by bending your elbows, keeping your core engaged and your back straight.\n\n3-Push your body back up to the starting position.\n\n4-Once you're in the starting plank position, lift one hand off the ground and tap your opposite shoulder with it. Return your hand to the ground.\n\n5-Repeat the shoulder tap with your opposite hand.\n\n6-Perform another push-up, then repeat the shoulder taps on both sides.\n\n7-Continue alternating between push-ups and shoulder taps for desired number of reps.\n\n*Remember to keep your core engaged throughout the movement, and avoid letting your hips sag or lifting them too high. Additionally, keep your neck in a neutral position and avoid letting your head drop or extend too far forward. If you're new to this exercise, start with a modified push-up by performing it on your knees until you build up enough strength to perform a full push-up with the shoulder taps.\n\n",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95c3b"
+  },
+  "bodyPart": "Triceps",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/bench-dips-on-floor.gif?alt=media&token=c31f0316-fc2f-42de-b67e-dc98fc5e981e",
+  "id": 830,
+  "name": "bench dip",
+  "target": "triceps",
+  "active": true,
+  "category": "Chest & Triceps",
+  "loc": "Both",
+  "order": 6,
+  "type": "normal",
+  "counter": 60,
+  "description": "3 sets of 8-12 reps with moderate to heavy weights.",
+  "instructor": "Weighted bench dips are a great exercise for building upper body strength, especially in the triceps and chest muscles. Here's how to perform the exercise:\n\n1-Sit on the edge of a bench or chair and place your hands on the bench next to your hips, fingers pointing forward.\n\n2-Walk your feet out in front of you and lift your hips off the bench so that your arms are supporting your weight. This is the starting position.\n\n3-Hold a weight plate between your thighs or attach a dip belt with a weight plate hanging between your legs.\n\n4-Lower your body down by bending your elbows and keeping your chest up. Keep your elbows close to your body and your forearms perpendicular to the floor.\n\n5-Once your upper arms are parallel to the ground, push yourself back up to the starting position, squeezing your triceps and chest muscles at the top of the movement.\n\n6-Repeat for the desired number of reps.\n\n*Remember to keep your core engaged throughout the exercise and to use a weight that challenges you but still allows you to maintain proper form.\n",
+  "level": "beginner",
+  "inputType": "rep"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95c47"
+  },
+  "bodyPart": "Leg",
+  "equipment": "dumbbell",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/dumbbell-lunges.gif?alt=media&token=51b3f0f5-d94e-4ef1-9a82-e65687f7815c",
+  "id": 3644,
+  "name": "weighted lunge ",
+  "target": "glutes",
+  "active": true,
+  "category": "Full body",
+  "description": "3 sets of 8-10 reps each side",
+  "loc": "Both",
+  "type": "sub",
+  "instructor": "",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95b67"
+  },
+  "bodyPart": "Chest",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/knee-push-ups.gif?alt=media&token=21c028a6-0ff1-4c4d-932d-9c30b04592ac",
+  "id": 659,
+  "name": "Knee-Ups",
+  "target": "pectorals",
+  "active": true,
+  "category": "Core",
+  "loc": "Both",
+  "type": "sub",
+  "description": "beginners : 2-3 sets of 10-12 reps\nadvanced : 3-4 sets of 20-30 reps ",
+  "instructor": "",
+  "inputType": "rep",
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "63c432a2a0009819e5a95c29"
+  },
+  "bodyPart": "Triceps",
+  "equipment": "body weight",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/Triceps-dips-on-floors.gif?alt=media&token=3017e2c3-03ff-4e5c-a733-738e322a8b03",
+  "id": 815,
+  "name": "triceps dips floor",
+  "target": "triceps",
+  "active": true,
+  "category": "Full body",
+  "description": "3 sets of 10-12 reps",
+  "loc": "Both",
+  "type": "sub",
+  "instructor": "1-Sit on the floor with your knees bent and your feet flat on the ground, with your hands placed on the ground behind you and fingers pointing forward.\n\n2-Slowly lift your hips off the ground, straightening your arms and supporting your weight with your hands.\n\n3-Lower your body towards the ground by bending your elbows, keeping your shoulders down and your elbows close to your sides.\n\n4-Once your elbows reach a 90-degree angle, push back up to the starting position by straightening your arms.",
+  "counter": 60,
+  "level": "beginner"
+},
+{
+  "_id": {
+    "$oid": "647f369a7b0478f99fdfbeab"
+  },
+  "name": "12",
+  "counter": 23,
+  "order": 23,
+  "type": "warmup",
+  "active": false,
+  "category": "Upper body",
+  "equipment": "leverage machine",
+  "bodyPart": "Triceps",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/3_4%20sit-up%20(2).gif?alt=media&token=04e28432-5451-4305-871f-4ae2c3caf010",
+  "level": "beginner",
+  "loc": "Home",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647f4b1a7b0478f99fdfbf8d"
+  },
+  "name": "Eccentric Pull Up",
+  "counter": 60,
+  "order": 3,
+  "description": "3 sets \n6-10 reps",
+  "type": "normal",
+  "active": true,
+  "inputType": "rep",
+  "category": "Back & Abs",
+  "equipment": "body weight",
+  "bodyPart": "Back",
+  "instructor": "1-Stand under the pull-up bar and on top of a box.\n2-Make sure your arms are parallel with the ground when you grab the bar and grip it overhand, with your hands slightly wider than shoulder-width. \n3-When you jump off the box, secure your chin over the bar, brace your core, tuck the tailbone, and squeeze your glutes.",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/eccentric-pull-up.gif?alt=media&token=96e8c95d-3be6-4b68-9d05-ea0de6541184",
+  "video": "https://assets.sweat.com/exercises/videos/000/002/691/original/2691_chin_up_overhand_phonefbcc38feb448c463de315d5bd89e8d43.mp4",
+  "level": "moderate",
+  "loc": "Gym",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64802fea778ebd3433874c00"
+  },
+  "name": "wewe",
+  "counter": 12,
+  "order": 1,
+  "type": "warmup",
+  "active": false,
+  "equipment": "leverage machine",
+  "bodyPart": "Chest",
+  "gifUrl": "http://backend.fitlinez.com/appgifs/downward-facing-dog-1024x825.png?alt=media&token=70354eb5-2e3e-4600-a17e-8ee16bde7a5d",
+  "level": "beginner",
+  "__v": 0
+}]

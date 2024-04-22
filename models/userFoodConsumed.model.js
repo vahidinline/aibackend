@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const UserInteractionSchema = new mongoose.Schema({
   userId: Number,
+  MealId: String,
   username: String,
   userText: String,
   aiResponse: String,

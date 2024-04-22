@@ -7,74 +7,73 @@ const { default: axios } = require('axios');
 const UserInteractionModel = require('../models/userFoodConsumed.model');
 const UserModel = require('../models/botUser.model');
 const NutritionSchema = require('../models/mealNutrition.model');
+const MealModel = require('../models/meal.model');
+const ErrorModel = require('../models/error.model');
 openai.apiKey = process.env.OPENAI_API_KEY;
 const getNutrition = require('../middleware/getNutrition');
+const sumUpFunc = require('../middleware/sumUp');
 
-// Function to convert JSON to HTML table
 function jsonToHtmlTable(json) {
-  console.log('json in html', json);
   let html = '';
 
   // Add meal name
-  html += `*Meal Name*: Breakfast\n`;
+  html += `*Meal Name*: ${json.meal_name}\n`;
 
-  // Add amounts
-  json.meal?.forEach(({ name, amount }) => {
-    html += `*${name}*: ${amount}\n`;
-  });
+  // Add amount
+  html += `*Amount*: ${json.amount}\n`;
 
   return html;
 }
 
 const initializeBot = () => {
   const bot = new Telegraf(process.env.BOT_TOKEN);
-  //storing user into database with this schema  userId: Number, username: String,
-  //listening for the start command from telegram bot
-  // Command: /start
-  // bot.hears(/\/start/, async (msg) => {
-  //   const newUser = new UserModel({
-  //     userId: msg.from.id,
-  //     username: msg.from.username,
-  //   });
-  //   await newUser.save();
-  //   //  await bot.telegram.sendMessage(msg.chat.id, 'Welcome to the bot!');
-  //   await bot.telegram.sendMessage(msg.chat.id, 'Welcome to the bot!');
-  //   //provide options to users to select
-  //   await bot.telegram.sendMessage(msg.chat.id, 'Please select an option:', {
-  //     reply_markup: {
-  //       keyboard: [
-  //         ['Option 1', 'Option 2'],
-  //         ['Option 3', 'Option 4'],
-  //       ],
-  //       resize_keyboard: true,
-  //       one_time_keyboard: true,
-  //     },
-  //   });
-  //   bot.on('text', async (ctx) => {
-  //     const userOption = ctx.message.text;
-  //     console.log('User option:', userOption);
-  //     // Store user option in state
 
-  //     await bot.telegram.sendMessage(
-  //       msg.chat.id,
-  //       `You selected: ${userOption}`
-  //     );
+  // Start command and meal selection
+  bot.start(async (ctx) => {
+    await ctx.reply(
+      'Welcome to the Nutrition Bot! Please select an option:',
+      Markup.keyboard([
+        ['Breakfast'],
+        ['Lunch'],
+        ['Dinner'],
+        ['Snack'],
+        ['Daily Report'],
+      ]).resize()
+    );
+  });
+  bot.hears('Daily Report', async (ctx) => {
+    // Call your another function here
+    await sumUpFunc(ctx);
+  });
+  // Handle meal selection and store in MongoDB
+  bot.hears(/Breakfast|Lunch|Dinner|Snack/, async (ctx) => {
+    const meal = ctx.message.text;
+    const res = await MealModel.create({
+      userId: ctx.from.id,
+      meal_name: meal,
+    });
+    const MealId = res._id;
+    await UserInteractionModel.create({ userId: ctx.from.id, meal, MealId });
 
-  //     // Continue with the rest of the code
-  //     // ...
-  //   });
-  // });
-  // Store user option in state
+    //return MealModel id
+    await ctx.reply(
+      `You selected: ${meal}. Please enter the foods and amounts you ate (e.g., "2 eggs, 1 cup oatmeal"):`
+    );
+  });
 
+  // Process food input and send to OpenAI API
   bot.on('text', async (ctx) => {
     const userText = ctx.message.text;
-    console.log('User text:', userText);
+    const interaction = await UserInteractionModel.findOne({
+      userId: ctx.from.id,
+    }).sort({ _id: -1 });
+
     try {
       const requestBody = {
         messages: [
           {
             role: 'user',
-            content: `Please return a json format of extracted meal name and the amount in gram or whatever user inputed. if the input is not in english, translate it to english: ${userText}`,
+            content: `Please return a JSON format of extracted meal name and the amount in grams or whatever user inputted. If the input is not in English, translate it to English: ${userText}`,
           },
         ],
         temperature: 0.3,
@@ -84,9 +83,6 @@ const initializeBot = () => {
         max_tokens: 4000,
         stop: null,
       };
-      //store user input and ai response into database with this schema userId, username, userText , aiResponse,date, approvedbyuser
-
-      // console.log('Request body:', requestBody);
 
       const response = await axios.post(`${endpoint}`, requestBody, {
         headers: {
@@ -95,80 +91,69 @@ const initializeBot = () => {
       });
 
       const aiResponse = response.data.choices[0].message['content'];
-      const newInteraction = new UserInteractionModel({
-        userId: ctx.from.id,
-        username: ctx.from.username,
-        userText: userText,
-        aiResponse: aiResponse,
-        approvedbyuser: false, // this will be updated later
-      });
-      await newInteraction.save();
-      try {
-        const jsonResponse = JSON.parse(aiResponse);
-        console.log('AI response:', jsonResponse);
-        htmlTable = jsonToHtmlTable(jsonResponse);
-      } catch (error) {
-        console.error('Error parsing AI response:', error);
-        htmlTable = 'Could not parse AI response.';
+      interaction.aiResponse = aiResponse;
+
+      await interaction.save();
+      //check if amount is empty
+      if (aiResponse.includes('amount') === 'N/A') {
+        ctx.reply('Please enter the foods and amounts again.');
+        return;
       }
+      const jsonResponse = JSON.parse(aiResponse);
+      const htmlTable = jsonToHtmlTable(jsonResponse);
 
       ctx.replyWithMarkdown(
         `${htmlTable}\n\nIs this correct?`,
         Markup.inlineKeyboard([
-          Markup.button.callback('yes', 'YES'),
-          Markup.button.callback('no', 'NO'),
+          Markup.button.callback('Yes', 'YES'),
+          Markup.button.callback('No', 'NO'),
         ])
       );
-      //if user approved, update the database with approvedbyuser = true. if not , ask for the correct input
-      // console.log('AI response:', aiResponse);
     } catch (error) {
       console.error('Error handling message:', error);
       ctx.reply('Error handling message. Please try again later.');
+      //save error message to db ErrorModel for debugging
+      await ErrorModel.create({
+        message: error.message,
+        code: error.code,
+        userId: ctx.from.id,
+      });
     }
   });
 
   bot.action('YES', async (ctx) => {
-    // Find the most recent approved interaction by this user
-    const recentInteraction = await UserInteractionModel.findOne({
+    const interaction = await UserInteractionModel.findOne({
       userId: ctx.from.id,
-      //approvedbyuser: true,
-    }).sort('-date');
+    }).sort({ _id: -1 });
+    const aiResponse = JSON.parse(interaction.aiResponse);
+    const ingredients = [aiResponse.meal_name].map((item) => item);
+    const amount = [aiResponse.amount].map((item) => item);
 
-    // Check if the interaction exists
-    if (recentInteraction) {
-      console.log('User confirmed', recentInteraction);
-
-      // Extract ingredients from AI response
-      const aiResponse = JSON.parse(recentInteraction.aiResponse);
-      const ingredients = aiResponse.meal_items.map((item) => item.name); // Corrected line
-
-      // Send the ingredients to the nutrition API
-      try {
-        const nutritionInfoNested = await getNutrition(ingredients);
-        console.log('Nutrition info:', nutritionInfoNested);
-
-        // Flatten the array of arrays
-        const nutritionInfo = nutritionInfoNested.flat();
-
-        // Update mealNutrition field in the recentInteraction
-        recentInteraction.mealNutrition = [
-          {
-            meal_name: aiResponse.meal_name,
-            ingredients: nutritionInfo, // Assign the flattened array
-          },
-        ];
-
-        await recentInteraction.save();
-      } catch (error) {
-        console.error('Error getting nutrition info:', error);
-      }
+    try {
+      const nutritionInfo = await getNutrition(ingredients, amount);
+      console.log(nutritionInfo);
+      const res = await MealModel.findByIdAndUpdate(
+        interaction.MealId,
+        { meal: nutritionInfo },
+        { new: true }
+      );
+      ctx.reply('Nutrition information saved!');
+    } catch (error) {
+      ctx.reply('Error getting nutrition information. Please try again later.');
+      //save error message to db ErrorModel for debugging
+      await ErrorModel.create({
+        message: error.message,
+        code: error.code,
+        userId: ctx.from.id,
+      });
     }
   });
-  // bot.action('NO', (ctx) => {
-  //   console.log('User did not confirm');
-  //   ctx.reply("I see that you did not confirm. Let's try again.");
-  //   // Do something when the user does not confirm
-  // });
+
+  bot.action('NO', (ctx) => {
+    ctx.reply(
+      "I see that you didn't confirm. Please enter the foods and amounts again."
+    );
+  });
 
   return bot;
 };

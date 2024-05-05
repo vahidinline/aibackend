@@ -1,11 +1,11 @@
 const express = require('express');
-const PaymentStripe = require('./Routes/PaymentStripe');
+const PaymentStripe = require('./Routes/PaymentStripe.js');
 const http = require('http');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieSession = require('cookie-session');
 const app = express();
-const initializeBot = require('./Routes/telegramBot.route');
+const initializeBot = require('./Routes/telegramBot.route.js');
 var Bugsnag = require('@bugsnag/js');
 var BugsnagPluginExpress = require('@bugsnag/plugin-express');
 
@@ -37,6 +37,11 @@ const Product = require('./Routes/Product.route.js');
 const FitlinezChatBot = require('./Routes/azure.route.js');
 const aiConversation = require('./Routes/conversation.route.js');
 const Gemini = require('./Routes/Gemini.route.js');
+const B2BTest = require('./Routes/b2bTest.route.js');
+const GeminifoodData = require('./Routes/vertex.js');
+const New = require('./Routes/new.js');
+const NutritionExtractor = require('./Routes/nutritionExtractor.route.js');
+const AudioConvertor = require('./Routes/convertAudioToText.route.js');
 var cron = require('node-cron');
 
 // const { Configuration, OpenAIApi } = require('openai');
@@ -65,7 +70,8 @@ app.use(
 );
 
 //console.log(process.env);
-const db = require('./models');
+const db = require('./models/index.js');
+const { GenerativeModel } = require('@google-cloud/vertexai');
 
 db.mongoose
   .connect(
@@ -122,7 +128,11 @@ app.use('/fitlinez-chat-bot', FitlinezChatBot);
 app.use('/Productlist', Product);
 app.use('/aiconversation', aiConversation);
 app.use('/gemini', Gemini);
-
+app.use('/test', B2BTest);
+app.use('/query', GeminifoodData);
+app.use('/new', New);
+app.use('/nutritionextractor', NutritionExtractor);
+app.use('/audioconvertor', AudioConvertor);
 const PORT = process.env.PORT || 8090;
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);

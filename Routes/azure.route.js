@@ -9,6 +9,7 @@ const azureApiKey = process.env['AZURE_KEY'];
 
 router.post('/', async (req, res) => {
   const { messages, userId, exerciseId, title, userLanguage } = req.body;
+
   try {
     // Get user level from the User model
     const user = await User.findById(userId);

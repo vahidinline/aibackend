@@ -12,18 +12,8 @@ const ErrorModel = require('../models/error.model');
 openai.apiKey = process.env.OPENAI_API_KEY;
 const getNutrition = require('../middleware/getNutrition');
 const sumUpFunc = require('../middleware/sumUp');
-
-function jsonToHtmlTable(json) {
-  let html = '';
-
-  // Add meal name
-  html += `*Meal Name*: ${json.meal_name}\n`;
-
-  // Add amount
-  html += `*Amount*: ${json.amount}\n`;
-
-  return html;
-}
+const aiRequestOpenAi = require('../middleware/aiRequestOpenAi');
+const jsonToHtmlTable = require('../middleware/jsonToTable');
 
 const initializeBot = () => {
   const bot = new Telegraf(process.env.BOT_TOKEN);
@@ -69,28 +59,7 @@ const initializeBot = () => {
     }).sort({ _id: -1 });
 
     try {
-      const requestBody = {
-        messages: [
-          {
-            role: 'user',
-            content: `Please return a JSON format of extracted meal name and the amount in grams or whatever user inputted. If the input is not in English, translate it to English: ${userText}`,
-          },
-        ],
-        temperature: 0.3,
-        top_p: 0.7,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-        max_tokens: 4000,
-        stop: null,
-      };
-
-      const response = await axios.post(`${endpoint}`, requestBody, {
-        headers: {
-          Authorization: `Bearer ${azureApiKey}`,
-        },
-      });
-
-      const aiResponse = response.data.choices[0].message['content'];
+      const aiResponse = await aiRequestOpenAi(userText);
       interaction.aiResponse = aiResponse;
 
       await interaction.save();
@@ -100,6 +69,7 @@ const initializeBot = () => {
         return;
       }
       const jsonResponse = JSON.parse(aiResponse);
+      console.log('jsonResponse', jsonResponse);
       const htmlTable = jsonToHtmlTable(jsonResponse);
 
       ctx.replyWithMarkdown(

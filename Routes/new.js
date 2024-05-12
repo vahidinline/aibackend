@@ -68,7 +68,7 @@ router.post('/getNutritionFacts', async (req, res) => {
     console.log('Food item query:', foodItemQuery);
 
     const response = await axios.get(
-      `https://api.nal.usda.gov/fdc/v1/foods/search?query=${foodItemQuery}&dataType=Branded,Foundation,Survey%20%28FNDDS%29&pageSize=10&requireAllWords=true&api_key=${APIKEY}`
+      `https://api.nal.usda.gov/fdc/v1/foods/search?query=${foodItemQuery}&dataType=Branded,Foundation,Survey%20%28FNDDS%29&pageSize=20&requireAllWords=true&api_key=${APIKEY}`
     );
 
     if (
@@ -76,6 +76,7 @@ router.post('/getNutritionFacts', async (req, res) => {
       response.data.foods &&
       response.data.foods.length > 0
     ) {
+      console;
       const foodList = response.data.foods.map((foodItem) => ({
         name: foodItem.description,
         datatype: foodItem.dataType,

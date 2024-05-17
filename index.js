@@ -42,6 +42,7 @@ const GeminifoodData = require('./Routes/vertex.js');
 const New = require('./Routes/new.js');
 const NutritionExtractor = require('./Routes/nutritionExtractor.route.js');
 const AudioConvertor = require('./Routes/convertAudioToText.route.js');
+const CustomLLM = require('./Routes/customModel.route.js');
 var cron = require('node-cron');
 
 // const { Configuration, OpenAIApi } = require('openai');
@@ -133,6 +134,7 @@ app.use('/query', GeminifoodData);
 app.use('/new', New);
 app.use('/nutritionextractor', NutritionExtractor);
 app.use('/audioconvertor', AudioConvertor);
+app.use('/vertex', CustomLLM);
 const PORT = process.env.PORT || 8090;
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);

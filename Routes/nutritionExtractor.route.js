@@ -5,11 +5,12 @@ const FoodItem = require('../models/nutrition.model'); // Assuming you have a Fo
 
 // Step 1: Extract food items and amounts
 async function extractFoodItems(userInput) {
+  console.log('userInput', userInput);
   const messages = [
     {
       role: 'system',
       content:
-        'Extract the food items and their amounts in JSON format as a pure array of objects, where each object represents a food item and its amount. Do not include any additional text outside the JSON array.',
+        'Extract the food items and their amounts, and return only in JSON format as a pure array of objects, where each object represents a food item, its amount and its unit. Do not include any additional text outside the JSON array.',
     },
     { role: 'user', content: `${userInput}` },
   ];
@@ -33,8 +34,17 @@ async function extractFoodItems(userInput) {
         },
       }
     );
+    console.log('response', response.data.choices[0].message.content);
+    //find the first [ and last ] and extract the content between them
+    const startIndex = response.data.choices[0].message.content.indexOf('[');
+    const endIndex = response.data.choices[0].message.content.lastIndexOf(']');
+    const parsedContent = JSON.parse(
+      response.data.choices[0].message.content.slice(startIndex, endIndex + 1)
+    );
+
     // console.log(response.data.choices[0].message.content); // Log the raw response
-    const parsedContent = JSON.parse(response.data.choices[0].message.content);
+    //const parsedContent = JSON.parse(response.data.choices[0].message.content);
+    console.log('parsedContent', parsedContent);
     return parsedContent;
     // console.log(
     //   'data',
@@ -155,6 +165,7 @@ router.post('/', async (req, res) => {
     // Extract food items and amounts
     const foodItems = await extractFoodItems(userInput);
     console.log('foodItems', foodItems);
+    return res.json({ foodItems });
 
     if (!Array.isArray(foodItems)) {
       throw new Error('Invalid food items data');

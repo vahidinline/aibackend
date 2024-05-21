@@ -10,7 +10,7 @@ async function extractFoodItems(userInput) {
     {
       role: 'system',
       content:
-        'Extract the food items and their amounts, and return only in JSON format as a pure array of objects, where each object represents a food item, its amount and its unit. Do not include any additional text outside the JSON array.',
+        '"Given a description of food items, return the details in a JSON format as an array of objects. Each object should contain the food items name, its amount, and its unit. If the food items name is unclear or multiple items are detected, include an additional field in the object to flag the item as requiring further clarification. The JSON output should exclusively consist of this array, with no external text or information.Structure for a clear, identified food item in the JSON should include:  - name: String (the name of the food item)  - amount: Number (the quantity of the food item)  - unit: String (the measurement unit for the quantity).If the food item is unclear or there are multiple items detected, the structure should also include:  - unclear: Boolean (true if the item requires clarification) .Example JSON output for well-identified items:  [  {  "name": "Bananas", "amount": 3,   "unit": "pieces" },  { "name": "Milk",  "amount": 2,  "unit": "liters"  }  ]  Example JSON output for items requiring clarification:  [ {  "name": "",   "amount": 0,   "unit": "",   "unclear": true  }  ]"  ',
     },
     { role: 'user', content: `${userInput}` },
   ];
@@ -112,20 +112,22 @@ async function extractFoodItems(userInput) {
 //   }
 // }
 
-async function getNutritionFacts(foodItem) {
-  if (!foodItem || !(foodItem.food || foodItem.foodItem) || !foodItem.amount) {
-    throw new Error('Invalid food item');
-  }
+async function getNutritionFacts(foodItems) {
+  const { name, amount, unit } = foodItems;
+  // if (!foodItem || !(foodItem.food || foodItem.foodItem) || !foodItem.amount) {
+  //   throw new Error('Invalid food item');
+  // }
 
   const messages = [
     {
       role: 'system',
       content:
-        'provide calories, Carbs, Protein, sugar, and fat in JSON format',
+        'provide calories, Carbs, Protein, sugar, and fat in JSON format.If you dont find any information about the food item or need to be more specific,return a JSON with the food item and amount only.',
     },
     {
       role: 'user',
-      content: `${foodItem.amount} of ${foodItem.food || foodItem.foodItem}`,
+
+      content: `${amount} - ${unit} of ${foodItem}`,
     },
   ];
   console.log('messages in getNutritionFacts', messages);
@@ -188,6 +190,27 @@ router.post('/', async (req, res) => {
       nutrients,
     });
     await foodItem.save();
+
+    res.json({ message: 'Response saved successfully' });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.post('/addfood', async (req, res) => {
+  const { foodItems, userId } = req.body;
+
+  try {
+    const nutritionFacts = await getNutritionFacts(foodItems);
+    console.log('nutritionFacts', nutritionFacts);
+
+    // // Save the result to MongoDB
+    // const foodItem = new FoodItem({
+    //   userInput,
+    //   nutrients,
+    // });
+    //await foodItem.save();
 
     res.json({ message: 'Response saved successfully' });
   } catch (error) {

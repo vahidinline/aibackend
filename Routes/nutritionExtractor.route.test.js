@@ -19,7 +19,7 @@ describe('getNutritionFacts', () => {
       sugar: 5,
       fat: 3,
     };
-    mock.onPost(process.env.OPENAI_FOOD_API_ENDPOINT).reply(200, {
+    mock.onPost(process.env.OPENAI_FOOD_API_GPT_4_ENDPOINT).reply(200, {
       choices: [{ message: { content: JSON.stringify(mockResponse) } }],
     });
 

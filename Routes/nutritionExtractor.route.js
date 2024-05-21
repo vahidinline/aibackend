@@ -127,7 +127,7 @@ async function getNutritionFacts(foodItems) {
     {
       role: 'user',
 
-      content: `${amount} - ${unit} of ${foodItem}`,
+      content: `${amount} - ${unit} of ${name}`,
     },
   ];
   console.log('messages in getNutritionFacts', messages);
@@ -212,7 +212,7 @@ router.post('/addfood', async (req, res) => {
     // });
     //await foodItem.save();
 
-    res.json({ message: 'Response saved successfully' });
+    res.json(nutritionFacts);
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: 'Internal Server Error' });

@@ -6,7 +6,7 @@ const app = express();
 const router = express.Router();
 
 // Replace these with your actual values
-const ENDPOINT_ID = '4056148972400541696';
+const ENDPOINT_ID = '2382076548413915136';
 const PROJECT_ID = '350430681081';
 const KEY_FILE_PATH = './config/key.json';
 
@@ -29,8 +29,9 @@ app.use(express.json());
 // Define the API endpoint
 router.post('/', async (req, res) => {
   const url = `https://us-central1-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/us-central1/endpoints/${ENDPOINT_ID}:predict`;
-  const authToken = await getAuthToken(); // Ensure to `await` here
+  const authToken = await getAuthToken();
   const inputData = req.body;
+  console.log('Received input data:', inputData);
 
   try {
     const response = await axios.post(url, inputData, {
@@ -40,23 +41,25 @@ router.post('/', async (req, res) => {
       },
     });
 
-    // Send response back to client
+    console.log('Prediction response:', response.data);
     res.json(response.data);
   } catch (error) {
-    console.error(
-      'Error making prediction:',
-      error.response ? error.response.data : error.message
-    );
-    res.status(500).json({ error: 'Internal server error' });
+    if (error.response) {
+      // Request made and server responded
+      console.error('Error response data:', error.response.data);
+      console.error('Error response status:', error.response.status);
+      console.error('Error response headers:', error.response.headers);
+      res.status(error.response.status).json(error.response.data);
+    } else if (error.request) {
+      // Request made but no response received
+      console.error('Error request data:', error.request);
+      res.status(500).json({ error: 'No response received from server' });
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.error('Error message:', error.message);
+      res.status(500).json({ error: error.message });
+    }
   }
-});
-
-app.use('/predict', router);
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
 });
 
 module.exports = router;

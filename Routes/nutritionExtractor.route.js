@@ -10,7 +10,7 @@ async function extractFoodItems(userInput) {
     {
       role: 'system',
       content:
-        '"Given a description of food items, return the details in a JSON format as an array of objects. Each object should contain the food items name, its amount, and its unit. If the food items name is unclear or multiple items are detected, include an additional field in the object to flag the item as requiring further clarification. The JSON output should exclusively consist of this array, with no external text or information.Structure for a clear, identified food item in the JSON should include:  - name: String (the name of the food item)  - amount: Number (the quantity of the food item)  - unit: String (the measurement unit for the quantity).If the food item is unclear or there are multiple items detected, the structure should also include:  - unclear: Boolean (true if the item requires clarification) .Example JSON output for well-identified items:  [  {  "name": "Bananas", "amount": 3,   "unit": "pieces" },  { "name": "Milk",  "amount": 2,  "unit": "liters"  }  ]  Example JSON output for items requiring clarification:  [ {  "name": "",   "amount": 0,   "unit": "",   "unclear": true  }  ]"  ',
+        '"Given a description of food items, return the details in a JSON format as an array of objects. Each object should contain the food items name, its amount, and its unit. If the food items name is unclear or multiple items are detected, include an additional field in the object to flag the item as requiring further clarification. The JSON output should exclusively consist of this array, with no external text or information.Structure for a clear, identified food item in the JSON should include:  - name: String (the name of the food item)  - amount: Number (the quantity of the food item)  - unit: String (the measurement unit for the quantity).If the food item is unclear or there are multiple items detected, the structure should also include:  - unclear: Boolean (true if the item requires clarification) .Example JSON output for well-identified items:  [  {  "name": "Bananas", "amount": 3,   "unit": "pieces" },  { "name": "Milk",  "amount": 2,  "unit": "liters"  }  ]  Example JSON output for items requiring clarification:  [ {  "name": "",   "amount": 0,   "unit": "",   "unclear": true  }  ]"  do not include any explanation',
     },
     { role: 'user', content: `${userInput}` },
   ];
@@ -121,15 +121,14 @@ async function getNutritionFacts(foodItems) {
   const messages = [
     {
       role: 'system',
-      content:
-        'provide calories, Carbs, Protein, sugar, and fat in JSON format.If you dont find any information about the food item or need to be more specific,return a JSON with the food item and amount only.',
+      content: `Please provide the nutrition facts for the following food item in valid JSON format, with the amount and unit for each nutrient specified separately. Include fields for food_item, serving_size, calories, total_fat, saturated_fat, cholesterol, sodium, total_carbohydrates, dietary_fiber, sugars, protein, and vitamins_and_minerals, with separate values for the amount and unit of each nutrient. For nutrients or vitamins and minerals, if specific information is not available, include the field with the amount as "N/A" and the unit field empty. Use error codes 500 for unclear requests and 404 for data not found.`,
     },
     {
       role: 'user',
-
       content: `${amount} - ${unit} of ${name}`,
     },
   ];
+
   console.log('messages in getNutritionFacts', messages);
 
   const requestBody = {
@@ -138,7 +137,7 @@ async function getNutritionFacts(foodItems) {
     top_p: 0.7,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 500,
+    max_tokens: 1000,
   };
 
   try {
@@ -151,7 +150,7 @@ async function getNutritionFacts(foodItems) {
         },
       }
     );
-    console.log(response.data.choices[0].message.content); // Log the raw response
+    console.log('Finall result', response.data.choices[0].message.content); // Log the raw response
     return JSON.parse(response.data.choices[0].message.content);
   } catch (error) {
     console.error('Error getting nutrition facts:', error.message);

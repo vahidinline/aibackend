@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const fetch = require('node-fetch'); // Ensure you have node-fetch installed
+//const fetch = require('node-fetch'); // Ensure you have node-fetch installed
 const API_KEY = process.env.OPENAI_API_KEY;
 const { OpenAIApi } = require('openai');
 const e = require('express');
 const { json } = require('body-parser');
-const openai = new OpenAIApi(API_KEY);
+const openai = new OpenAIApi(API_KEY); //
 
 require('dotenv').config();
 

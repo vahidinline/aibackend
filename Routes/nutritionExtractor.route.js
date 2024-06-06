@@ -11,7 +11,7 @@ async function extractFoodItems(userInput) {
     {
       role: 'system',
       content:
-        '"Given a description of food items, return the details in a JSON format as an array of objects. Each object should contain the food items name, its amount, and its unit. If the food items name is unclear or multiple items are detected, include an additional field in the object to flag the item as requiring further clarification. The JSON output should exclusively consist of this array, with no external text or information.Structure for a clear, identified food item in the JSON should include:  - name: String (the name of the food item)  - amount: Number (the quantity of the food item)  - unit: String (the measurement unit for the quantity).If the food item is unclear or there are multiple items detected, the structure should also include:  - unclear: Boolean (true if the item requires clarification) .Example JSON output for well-identified items:  [  {  "name": "Bananas", "amount": 3,   "unit": "pieces" },  { "name": "Milk",  "amount": 2,  "unit": "liters"  }  ]  Example JSON output for items requiring clarification:  [ {  "name": "",   "amount": 0,   "unit": "",   "unclear": true  }  ]"  do not include any explanation',
+        '"Given a description of food items, return the details in a JSON format as an array of objects. Each object should contain the food items name (translated to English if not), its amount, and its unit. If the food items name is unclear or multiple items are detected, include an additional field in the object to flag the item as requiring further clarification. The JSON output should exclusively consist of this array, with no external text or information.Structure for a clear, identified food item in the JSON should include:  - name: String (the name of the food item)  - amount: Number (the quantity of the food item)  - unit: String (the measurement unit for the quantity).If the food item is unclear or there are multiple items detected, the structure should also include:  - unclear: Boolean (true if the item requires clarification) .Example JSON output for well-identified items:  [  {  "name": "Bananas", "amount": 3,   "unit": "pieces" },  { "name": "Milk",  "amount": 2,  "unit": "liters"  }  ]  Example JSON output for items requiring clarification:  [ {  "name": "",   "amount": 0,   "unit": "",   "unclear": true  }  ]"  do not include any explanation',
     },
     { role: 'user', content: `${userInput}` },
   ];
@@ -174,7 +174,7 @@ async function calculateTotalNutritionForDay(userId = '', date = new Date()) {
 router.get('/dailyreport/:id', async (req, res) => {
   const { id } = req.params;
   const date = new Date().toISOString().split('T')[0];
-  console.log('id', id);
+  console.log('id in dailyreport', id);
 
   try {
     const totalNutrition = await calculateTotalNutritionForDay(id);
@@ -188,7 +188,7 @@ router.get('/dailyreport/:id', async (req, res) => {
 router.get('/weeklyreport/:id', async (req, res) => {
   const { id } = req.params;
   const date = new Date().toISOString().split('T')[0];
-
+  console.log('id in weeklyreport', id);
   try {
     const totalNutrition = await calculateTotalNutritionForDay(id, date);
     res.json(totalNutrition);
@@ -198,19 +198,31 @@ router.get('/weeklyreport/:id', async (req, res) => {
   }
 });
 
-router.get('/customreport/:id', async (req, res) => {
-  const { id } = req.params;
-  const { startDate, endDate } = req.body;
+router.get('/customreport/', async (req, res) => {
+  const { startDate, endDate, userId } = req.query;
+
   console.log('startDate', startDate);
   console.log('endDate', endDate);
-  console.log('id', id);
+  console.log('userId in custom report', userId);
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  const daysBetween = Math.floor((end - start) / (1000 * 60 * 60 * 24));
+  console.log('daysBetween', daysBetween);
+
   try {
     const totalNutrition = await calculateTotalNutritionBetweenDates(
-      id,
+      userId,
       startDate,
-      endDate
+      endDate,
+      daysBetween
     );
-    res.json(totalNutrition);
+    console.log('totalNutrition', totalNutrition);
+    res.json({
+      startDate,
+      endDate,
+      daysBetween,
+      totalNutrition,
+    });
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: 'Internal Server Error' });

@@ -48,4 +48,15 @@ router.get('/api/daily-calories', async (req, res) => {
   }
 });
 
+router.get('/api/calorie-report/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const dailyCalories = await DailyCalories.findById(id);
+    res.json(dailyCalories);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;

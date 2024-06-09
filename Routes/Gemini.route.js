@@ -45,24 +45,25 @@ const generativeModel = vertex_ai.preview.getGenerativeModel({
   ],
 });
 
-router.post('/upload', upload.single('video'), async (req, res) => {
-  const videoPath = req.file.path;
+router.post('/', async (req, res) => {
+  //const videoPath = req.file.path;
   const prompt = req.body.prompt;
+  console.log('prompt', prompt);
 
   // Upload the video to Google Cloud Storage
-  await storage.bucket(bucketName).upload(videoPath, {
-    gzip: true,
-    metadata: {
-      cacheControl: 'public, max-age=31536000',
-    },
-  });
+  // await storage.bucket(bucketName).upload(videoPath, {
+  //   gzip: true,
+  //   metadata: {
+  //     cacheControl: 'public, max-age=31536000',
+  //   },
+  // });
 
   // Get the file as a Buffer
-  const file = storage.bucket(bucketName).file(req.file.filename);
-  const [contents] = await file.download();
+  //const file = storage.bucket(bucketName).file(req.file.filename);
+  //const [contents] = await file.download();
 
   // Convert the Buffer to a base64 string
-  const videoBase64 = contents.toString('base64');
+  //const videoBase64 = contents.toString('base64');
 
   const generateContentReq = {
     contents: [
@@ -70,7 +71,7 @@ router.post('/upload', upload.single('video'), async (req, res) => {
         role: 'user',
         parts: [
           { text: prompt },
-          { inline_data: { mime_type: 'video/mp4', data: videoBase64 } },
+          // { inline_data: { mime_type: 'video/mp4', data: videoBase64 } },
         ],
       },
     ],

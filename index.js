@@ -76,6 +76,7 @@ app.use(
 //console.log(process.env);
 const db = require('./models/index.js');
 const { GenerativeModel } = require('@google-cloud/vertexai');
+const AddTemData = require('./middleware/addCustomFood.js');
 
 db.mongoose
   .connect(
@@ -116,6 +117,10 @@ app.get('/', (req, res) => {
 //     console.error(error);
 //   }
 // });
+
+app.post('/addcustomfood', (req, res) => {
+  AddTemData();
+});
 
 app.use('/', AuthRoute);
 app.use('/create-checkout-session', PaymentStripe);

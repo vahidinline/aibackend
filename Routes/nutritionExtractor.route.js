@@ -7,80 +7,22 @@ const { customFoodFinder } = require('../middleware/customfood');
 const foodExtractorGmini = require('./vertex');
 const foodChecker = require('../middleware/foodchecker');
 const LogErrorSchema = require('../models/ErrorLog.model');
+const foodCheckerGmini = require('../middleware/foodChecker.Gemini');
+const extractFoodItems = require('../middleware/nutritionFinder');
+const storeFoodItem = require('../middleware/storeFoodItems');
+const getsingleMealResult = require('../middleware/getSingleMealResult');
+const { stat } = require('fs');
 
 // Step 1: Extract food items and amounts
-async function extractFoodItems(userInput, userId) {
-  console.log('userInpu in extractFoodItems', userInput);
-
-  // const customFood = await foodExtractorGmini(userInput);
-  // console.log('customFood', customFood);
-  // start = customFood.indexOf('[');
-  // end = customFood.lastIndexOf(']');
-  // result = customFood.slice(start, end + 1);
-
-  // const parsedContent = JSON.parse(result);
-  // console.log('parsedContent', parsedContent);
-  // return parsedContent;
-  const messages = [
-    {
-      role: 'system',
-      content:
-        '"Given a description of food items, return the details in a JSON format as an array of objects.If it is not a food item, return "false". Each object should contain the food items name (translated to English if not), its amount, and its unit. If the food items name is unclear or multiple items are detected, include an additional field in the object to flag the item as requiring further clarification. The JSON output should exclusively consist of this array, with no external text or information.Structure for a clear, identified food item in the JSON should include:  - name: String (the name of the food item)  - amount: Number (the quantity of the food item)  - unit: String (the measurement unit for the quantity).If the food item is unclear or there are multiple items detected, the structure should also include:  - unclear: Boolean (true if the item requires clarification) .Example JSON output for well-identified items:  [  {  "name": "Bananas", "amount": 3,   "unit": "pieces" },  { "name": "Milk",  "amount": 2,  "unit": "liters"  }  ]  Example JSON output for items requiring clarification:  [ {  "name": "",   "amount": 0,   "unit": "",   "unclear": true  }  ]"  do not include any explanation',
-    },
-    { role: 'user', content: `${userInput}` },
-  ];
-
-  const requestBody = {
-    messages,
-    temperature: 0,
-    top_p: 0.7,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    max_tokens: 500,
-  };
-
-  try {
-    const response = await axios.post(
-      `${process.env.OPENAI_FOOD_API_ENDPOINT}`,
-      requestBody,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.OPENAI_FOOD_API_KEY}`,
-        },
-      }
-    );
-    console.log('response', response.data.choices[0].message.content);
-
-    const startIndex = response.data.choices[0].message.content.indexOf('[');
-    const endIndex = response.data.choices[0].message.content.lastIndexOf(']');
-    const parsedContent = JSON.parse(
-      response.data.choices[0].message.content.slice(startIndex, endIndex + 1)
-    );
-    console.log('parsedContent', parsedContent);
-    // const checkfood = await foodChecker(parsedContent,userId);
-    // if (checkfood) {
-    //   return { checkfood };
-    // } else return { error: 'Error extracting food items' };
-    return parsedContent;
-  } catch (error) {
-    console.error('Error extracting food items: line 74 user Id', userId);
-    const errorLog = new LogErrorSchema({
-      error: error.message,
-      userId: userId,
-      errorData: error,
-    });
-
-    await errorLog.save();
-
-    console.error('Error extracting food items: line 74', error.message);
-    throw new Error('Error extracting food items');
-  }
-}
 
 // Step 2: Get nutrition facts for each food item
 
-async function getNutritionFacts(foodItems, userId) {
+const getNutritionFacts = async (foodItems, userId) => {
   const { name, amount, unit } = foodItems;
+  //console.log('name, amount, unit', name, amount, unit);
+  // const checkFood = await customFoodFinder(name, userId);
+  // console.log('checkFood in getNutritionFacts', checkFood);
+  // return;
 
   const messages = [
     {
@@ -93,7 +35,7 @@ async function getNutritionFacts(foodItems, userId) {
     },
   ];
 
-  console.log('messages in getNutritionFacts', messages);
+  //console.log('messages in getNutritionFacts', messages);
 
   const requestBody = {
     messages,
@@ -128,30 +70,164 @@ async function getNutritionFacts(foodItems, userId) {
     //return response.data.choices[0].message.content;
     throw new Error('Error getting nutrition facts');
   }
-}
+};
 
-// Step 3: Process the user input and save data
+//OLD Step 3: Process the user input and save data
+
+//NEW get user input and process it
 router.post('/', async (req, res) => {
-  const { userInput, userId } = req.body;
-  console.log('user id in initial req', userId);
+  const data = req.body;
+
+  // Validate and check initial data structure
+  if (!data || (Array.isArray(data) && data.length === 0)) {
+    return res.status(400).json({ error: 'Invalid input data' });
+  }
+
+  let userId, selectedMeal; // Declare these variables outside the try block for broader scope
 
   try {
-    // Extract food items and amounts
+    const results = [];
 
-    const foodItems = await extractFoodItems(userInput, userId);
-    return res.json({ foodItems });
+    // If data is not an array, wrap it in an array for uniform processing
+    const dataArray = Array.isArray(data) ? data : [data];
+
+    for (const item of dataArray) {
+      const { userInput } = item; // Extract userInput from each item
+
+      // Extract userId and selectedMeal only once if they are the same for all items
+      if (!userId || !selectedMeal) {
+        userId = item.userId;
+        selectedMeal = item.selectedMeal;
+      }
+
+      console.log('userInput in route', userInput, userId, selectedMeal);
+
+      // Validate the presence of essential fields
+      if (!userInput || !userId || !selectedMeal) {
+        return res.status(400).json({ error: 'Missing required fields' });
+      }
+
+      const foodItems = await extractFoodItems(userInput, userId, selectedMeal);
+      if (foodItems === null) {
+        return res.status(500).json({ error: 'No food item found' });
+      } else {
+        results.push(foodItems);
+      }
+    }
+
+    // Store the results using collected userId and selectedMeal
+    const saveResult = await storeFoodItem(results, userId, selectedMeal);
+    if (!saveResult) {
+      return res.status(500).json({ error: 'Failed to save food items' });
+    }
+    console.log('saveResult', saveResult);
+    const foodId = saveResult._id.toString();
+    const getResult = await getsingleMealResult(userId, selectedMeal);
+    if (getResult === null) {
+      return res.status(500).json({ error: 'No food item found' });
+    }
+
+    // Successfully retrieved and stored food items
+    console.log('got final Result');
+    res.json({
+      currentFood: saveResult,
+      status: 200,
+      foodId: foodId,
+      data: getResult,
+      mealName: selectedMeal,
+      foodItems: dataArray, // Changed to dataArray to represent all user inputs
+    });
   } catch (error) {
     console.error(error.message);
-    res.status(500).json({ error: 'Internal Server Error' });
-    const errorLog = new LogErrorSchema({
-      error: error.message,
-      userId: userId,
-      errorData: error,
-    });
 
-    await errorLog.save();
+    // Ensure userId and error details are accessible for logging
+    try {
+      if (userId) {
+        // Log error only if userId is defined
+        const errorLog = new LogErrorSchema({
+          error: error.message,
+          userId: userId,
+          errorData: error,
+        });
+        await errorLog.save();
+      }
+    } catch (logError) {
+      console.error('Failed to log error', logError);
+    }
+
+    // Send response after attempting to log the error
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+// router.post('/', async (req, res) => {
+//   const data = req.body;
+
+//   const { userInput, userId, selectedMeal } = data;
+//   console.log('userInput in route', userInput, userId, selectedMeal);
+
+//   try {
+//     // Extract food items and amounts
+//     const results = [];
+//     //check if data is an array
+//     if (!Array.isArray(data)) {
+//       const foodItems = await extractFoodItems(userInput, userId, selectedMeal);
+//       if (foodItems === null) {
+//         res.json({ error: 'No food item found' });
+//         return;
+//       } else {
+//         results.push(foodItems);
+//       }
+//     } else {
+//       for (const item of data) {
+//         const foodItems = await extractFoodItems(
+//           userInput,
+//           userId,
+//           selectedMeal
+//         );
+
+//         if (foodItems === null) {
+//           res.status(500).json({ error: 'No food item found' });
+//           return;
+//         } else {
+//           results.push(foodItems);
+//         }
+//       }
+//     }
+//     //console.log('results u', results);
+
+//     const saveResult = await storeFoodItem(results, userId, selectedMeal);
+//     const foodId = saveResult._id.toString();
+//     if (saveResult) {
+//       const getResult = await getsingleMealResult(userId, selectedMeal);
+
+//       if (getResult === null) {
+//         console.log('result is null');
+//         res.status(500).json({ error: 'No food item found' });
+//         return;
+//       } else {
+//         console.log('got final Result');
+//         res.json({
+//           status: 200,
+//           foodId: foodId,
+//           data: getResult,
+//           mealName: selectedMeal,
+//           foodItems: userInput,
+//         });
+//       }
+//     }
+//   } catch (error) {
+//     console.error(error.message);
+//     res.status(500).json({ error: 'Internal Server Error' });
+//     const errorLog = new LogErrorSchema({
+//       error: error.message,
+//       userId: userId,
+//       errorData: error,
+//     });
+
+//     await errorLog.save();
+//   }
+// });
 
 router.post('/addfood', async (req, res) => {
   const { foodItems, userId, selectedMeal } = req.body;
@@ -168,7 +244,7 @@ router.post('/addfood', async (req, res) => {
 
     await meal.save();
 
-    res.json(nutritionFacts);
+    res.json({ nutritionFacts, mealId: meal._id });
   } catch (error) {
     const errorLog = new LogErrorSchema({
       error: error.message,
@@ -273,14 +349,9 @@ router.get('/weeklyreport/:id', async (req, res) => {
 
 router.get('/customreport/', async (req, res) => {
   const { startDate, endDate, userId } = req.query;
-
-  console.log('startDate', startDate);
-  console.log('endDate', endDate);
-  console.log('userId in custom report', userId);
   const start = new Date(startDate);
   const end = new Date(endDate);
   const daysBetween = Math.floor((end - start) / (1000 * 60 * 60 * 24));
-  console.log('daysBetween', daysBetween);
 
   try {
     const totalNutrition = await calculateTotalNutritionBetweenDates(
@@ -304,6 +375,21 @@ router.get('/customreport/', async (req, res) => {
     });
 
     await errorLog.save();
+    console.error(error.message);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.put('/update', async (req, res) => {
+  const { status, foodId } = req.body;
+  console.log('status, foodId', status, foodId);
+
+  try {
+    const meal = await Meal.findById(foodId);
+    meal.status = status;
+    await meal.save();
+    res.json(meal);
+  } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: 'Internal Server Error' });
   }

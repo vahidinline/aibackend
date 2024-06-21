@@ -14,7 +14,7 @@ const VitaminsAndMineralsSchema = new mongoose.Schema({
 
 const FoodItemSchema = new mongoose.Schema({
   food_item: String,
-  serving_size: NutritionSchema,
+  serving_size: String,
   calories: NutritionSchema,
   total_fat: NutritionSchema,
   saturated_fat: NutritionSchema,
@@ -31,6 +31,7 @@ const MealSchema = new mongoose.Schema({
   userId: String,
   date: { type: Date, default: Date.now },
   mealName: String,
+  status: { type: String, default: 'pending' },
   foodItems: [FoodItemSchema],
 });
 

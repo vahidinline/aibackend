@@ -2,6 +2,7 @@ const { default: axios } = require('axios');
 const foodExtractorGmini = require('../Routes/vertex');
 const LogErrorSchema = require('../models/ErrorLog.model');
 const foodChecker = async (userInput, userId) => {
+  console.log('userInput in foodchecker', userInput);
   const customFood = await foodExtractorGmini(userInput);
   console.log('customFood in foodchecker', customFood);
   const messages = [

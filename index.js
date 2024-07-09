@@ -46,6 +46,8 @@ const CustomLLM = require('./Routes/customModel.route.js');
 const MealSelection = require('./Routes/Meal.route.js');
 const Voice = require('./Routes/Voice.route.js');
 const DailyCalories = require('./Routes/DailyCalories.route.js');
+const dailyCaloriesDetails = require('./Routes/dailyCaloriesDetails.route.js');
+const FoodData = require('./Routes/foodData.route.js');
 var cron = require('node-cron');
 
 // const { Configuration, OpenAIApi } = require('openai');
@@ -146,6 +148,8 @@ app.use('/vertex', CustomLLM);
 app.use('/mealselection', MealSelection);
 app.use('/voice', Voice);
 app.use('/calories', DailyCalories);
+app.use('/dailyCaloriesDetails', dailyCaloriesDetails);
+app.use('/foodData', FoodData);
 const PORT = process.env.PORT || 8090;
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);

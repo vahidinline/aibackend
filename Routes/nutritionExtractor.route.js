@@ -269,7 +269,11 @@ async function calculateTotalNutritionForDay(userId, date = new Date()) {
 
     const aggregateResult = await Meal.aggregate([
       {
-        $match: { userId: userId, date: { $gte: startOfDay, $lte: endOfDay } },
+        $match: {
+          userId: userId,
+          date: { $gte: startOfDay, $lte: endOfDay },
+          status: 'approved',
+        },
       },
       { $unwind: '$foodItems' },
       {
@@ -309,7 +313,7 @@ async function calculateTotalNutritionForDay(userId, date = new Date()) {
 router.get('/dailyreport/:id', async (req, res) => {
   const { id } = req.params;
   const date = new Date().toISOString().split('T')[0];
-  console.log('id in dailyreport', id);
+  //console.log('id in dailyreport', id);
 
   try {
     const totalNutrition = await calculateTotalNutritionForDay(id);

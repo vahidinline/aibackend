@@ -13,7 +13,7 @@ const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 const foodCheckerGmini = async (userInput) => {
   // console.log('userInput in gmini food checker', userInput);
-  const prompt = `check if the ${userInput} contain food items or not. If it is a food item, return the original input. If it is not a food item, return "false". Do not include any explanation.`;
+  const prompt = `Translate the input to English, then check if the ${userInput} contain food items or not. If it is a food item, return the original input. If it is not a food item, return "false". Do not include any explanation.`;
   const result = await model.generateContent(prompt);
   const response = await result.response;
   const text = response.text();

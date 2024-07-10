@@ -19,10 +19,6 @@ const { stat } = require('fs');
 
 const getNutritionFacts = async (foodItems, userId) => {
   const { name, amount, unit } = foodItems;
-  //console.log('name, amount, unit', name, amount, unit);
-  // const checkFood = await customFoodFinder(name, userId);
-  // console.log('checkFood in getNutritionFacts', checkFood);
-  // return;
 
   const messages = [
     {
@@ -34,8 +30,6 @@ const getNutritionFacts = async (foodItems, userId) => {
       content: `${amount} - ${unit} of ${name}`,
     },
   ];
-
-  //console.log('messages in getNutritionFacts', messages);
 
   const requestBody = {
     messages,
@@ -66,8 +60,7 @@ const getNutritionFacts = async (foodItems, userId) => {
     });
 
     await errorLog.save();
-    //console.error('Error getting nutrition facts:', error.message);
-    //return response.data.choices[0].message.content;
+
     throw new Error('Error getting nutrition facts');
   }
 };
@@ -128,7 +121,7 @@ router.post('/', async (req, res) => {
     }
 
     // Successfully retrieved and stored food items
-    console.log('got final Result');
+    console.log('got final Result', dataArray);
     res.json({
       currentFood: saveResult,
       status: 200,
@@ -159,75 +152,6 @@ router.post('/', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
-// router.post('/', async (req, res) => {
-//   const data = req.body;
-
-//   const { userInput, userId, selectedMeal } = data;
-//   console.log('userInput in route', userInput, userId, selectedMeal);
-
-//   try {
-//     // Extract food items and amounts
-//     const results = [];
-//     //check if data is an array
-//     if (!Array.isArray(data)) {
-//       const foodItems = await extractFoodItems(userInput, userId, selectedMeal);
-//       if (foodItems === null) {
-//         res.json({ error: 'No food item found' });
-//         return;
-//       } else {
-//         results.push(foodItems);
-//       }
-//     } else {
-//       for (const item of data) {
-//         const foodItems = await extractFoodItems(
-//           userInput,
-//           userId,
-//           selectedMeal
-//         );
-
-//         if (foodItems === null) {
-//           res.status(500).json({ error: 'No food item found' });
-//           return;
-//         } else {
-//           results.push(foodItems);
-//         }
-//       }
-//     }
-//     //console.log('results u', results);
-
-//     const saveResult = await storeFoodItem(results, userId, selectedMeal);
-//     const foodId = saveResult._id.toString();
-//     if (saveResult) {
-//       const getResult = await getsingleMealResult(userId, selectedMeal);
-
-//       if (getResult === null) {
-//         console.log('result is null');
-//         res.status(500).json({ error: 'No food item found' });
-//         return;
-//       } else {
-//         console.log('got final Result');
-//         res.json({
-//           status: 200,
-//           foodId: foodId,
-//           data: getResult,
-//           mealName: selectedMeal,
-//           foodItems: userInput,
-//         });
-//       }
-//     }
-//   } catch (error) {
-//     console.error(error.message);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//     const errorLog = new LogErrorSchema({
-//       error: error.message,
-//       userId: userId,
-//       errorData: error,
-//     });
-
-//     await errorLog.save();
-//   }
-// });
 
 router.post('/addfood', async (req, res) => {
   const { foodItems, userId, selectedMeal } = req.body;

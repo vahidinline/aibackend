@@ -78,12 +78,12 @@ router.get('/', async (req, res) => {
             totalFibers: 0,
           };
         }
-        acc[meal.name].totalCalories += meal.totalCalories;
-        acc[meal.name].totalCarbs += meal.totalCarbs;
-        acc[meal.name].totalFat += meal.totalFat;
-        acc[meal.name].totalProteins += meal.totalProteins;
-        acc[meal.name].totalSugars += meal.totalSugars;
-        acc[meal.name].totalFibers += meal.totalFibers;
+        acc[meal.name].totalCalories += meal.totalCalories.toFixed(2);
+        acc[meal.name].totalCarbs += meal.totalCarbs.toFixed(2);
+        acc[meal.name].totalFat += meal.totalFat.toFixed(2);
+        acc[meal.name].totalProteins += meal.totalProteins.toFixed(2);
+        acc[meal.name].totalSugars += meal.totalSugars.toFixed(2);
+        acc[meal.name].totalFibers += meal.totalFibers.toFixed(2);
         return acc;
       },
       {}

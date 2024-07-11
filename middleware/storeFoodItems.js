@@ -1,6 +1,6 @@
 const Meal = require('../models/meal.model');
 
-const storeFoodItem = async (results, userId, selectedMeal) => {
+const storeFoodItem = async (results, userId, selectedMeal, inputType) => {
   //console.log('results in storeFoodItem', results);
 
   //   console.log('userId in storeFoodItem', userId);
@@ -23,6 +23,7 @@ const storeFoodItem = async (results, userId, selectedMeal) => {
         const meal = new Meal({
           userId: userId,
           mealName: selectedMeal,
+          inputType: inputType,
           foodItems: item,
         });
         await meal.save();

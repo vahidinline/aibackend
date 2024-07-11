@@ -16,10 +16,10 @@ async function getNutritionData(barcode) {
     );
 
     // Log the full response from the Open Food Facts API
-    console.log(
-      'Open Food Facts API Response:',
-      JSON.stringify(response.data, null, 2)
-    );
+    // console.log(
+    //   'Open Food Facts API Response:',
+    //   JSON.stringify(response.data, null, 2)
+    // );
 
     if (response.data && response.data.product) {
       const productData = response.data.product;
@@ -94,7 +94,7 @@ async function getNutritionData(barcode) {
 
 router.post('/', async (req, res) => {
   const { barcode, userId, mealName } = req.body;
-
+  const inputType = 'barcode';
   if (!barcode || !userId || !mealName) {
     return res
       .status(400)
@@ -107,7 +107,12 @@ router.post('/', async (req, res) => {
       console.error('Nutrition data error:', nutritionData.error);
       return res.status(404).json({ error: nutritionData.error });
     }
-    const saveResult = await storeFoodItem(nutritionData, userId, mealName);
+    const saveResult = await storeFoodItem(
+      nutritionData,
+      userId,
+      mealName,
+      inputType
+    );
     if (!saveResult) {
       return res.status(500).json({ error: 'Failed to save food items' });
     }
@@ -126,7 +131,11 @@ router.post('/', async (req, res) => {
       data: getResult,
       mealName: mealName,
       foodItems: [
-        { buserInput: barcode, userId: userId, selectedMeal: mealName },
+        {
+          userInput: saveResult?.foodItems[0].food_item,
+          userId: userId,
+          selectedMeal: mealName,
+        },
       ], // Changed to dataArray to represent all user inputs
     });
 

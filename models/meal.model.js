@@ -31,6 +31,7 @@ const MealSchema = new mongoose.Schema({
   userId: String,
   date: { type: Date, default: Date.now },
   mealName: String,
+  inputType: String,
   status: { type: String, default: 'pending' },
   foodItems: [FoodItemSchema],
 });

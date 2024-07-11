@@ -70,7 +70,7 @@ const getNutritionFacts = async (foodItems, userId) => {
 //NEW get user input and process it
 router.post('/', async (req, res) => {
   const data = req.body;
-
+  const inputType = 'text';
   // Validate and check initial data structure
   if (!data || (Array.isArray(data) && data.length === 0)) {
     return res.status(400).json({ error: 'Invalid input data' });
@@ -109,7 +109,12 @@ router.post('/', async (req, res) => {
     }
 
     // Store the results using collected userId and selectedMeal
-    const saveResult = await storeFoodItem(results, userId, selectedMeal);
+    const saveResult = await storeFoodItem(
+      results,
+      userId,
+      selectedMeal,
+      inputType
+    );
     if (!saveResult) {
       return res.status(500).json({ error: 'Failed to save food items' });
     }

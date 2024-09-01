@@ -1,15 +1,12 @@
 const express = require('express');
 const multer = require('multer');
-//const fetch = require('node-fetch');
 const FormData = require('form-data');
 const fs = require('fs');
-const path = require('path');
-const { default: axios } = require('axios');
+const axios = require('axios');
 
 const app = express();
 const router = express.Router();
 
-// Set up storage using multer for incoming files
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/');
@@ -32,36 +29,96 @@ router.post('/api/upload', upload.single('file'), async (req, res) => {
     const formData = new FormData();
     formData.append('file', fileStream);
 
-    // Replace 'YourDeploymentName' with your actual deployment name
-    // Also, ensure you have the AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY set in your environment variables
-    const azureUrl = `https://foodnutritiondata.openai.azure.com/openai/deployments/gpt-4/audio/transcriptions?api-version=2024-02-01`;
+    // Azure API URL
+    const azureUrl = `https://workoutgenerator.openai.azure.com/openai/deployments/speechFoodRec/audio/transcriptions?api-version=2024-02-01`;
 
-    const response = await axios.post(azureUrl, {
-      body: formData,
+    // Sending the file to Azure OpenAI
+    const response = await axios.post(azureUrl, formData, {
       headers: {
-        'api-key': process.env.OPENAI_FOOD_API_KEY,
+        'api-key': 'a4b23a99be8d4a688d93a33066d7aaa4',
         ...formData.getHeaders(),
       },
     });
 
-    console.log(response);
-    return;
-    if (!response.ok) {
+    if (response.status !== 200) {
       throw new Error(`Error from Azure OpenAI: ${response.statusText}`);
     }
 
-    const data = await response.json();
+    const data = response.data;
 
     // Clean up: remove the temporary file
     fs.unlinkSync(req.file.path);
 
     // Send the transcription back to the client
-    //console.log(data);
-    //res.json(data);
+    console.log(data);
+    res.json(data);
   } catch (error) {
-    console.error('Failed to process and send file:', error);
+    console.error('Failed to process and send file:', error.message);
     res.status(500).send('Internal Server Error');
   }
 });
 
 module.exports = router;
+
+// const express = require('express');
+// const multer = require('multer');
+// const { SpeechClient } = require('@google-cloud/speech');
+// const fs = require('fs');
+// const app = express();
+// const router = express.Router();
+
+// // Google Cloud Speech-to-Text client
+// const speechClient = new SpeechClient();
+
+// // Multer storage for handling file uploads
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'uploads/');
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, Date.now() + '-' + file.originalname);
+//   },
+// });
+
+// const upload = multer({ storage: storage });
+
+// // Route for handling file uploads and speech-to-text conversion
+// router.post('/api/upload', upload.single('file'), async (req, res) => {
+//   if (!req.file) {
+//     return res.status(400).send('No file uploaded.');
+//   }
+//   console.log('req.file', req.file);
+//   try {
+//     // Read the uploaded audio file
+//     const fileStream = fs.createReadStream(req.file.path);
+
+//     // Configure the speech recognition request
+//     const config = {
+//       encoding: 'LINEAR16', // Adjust encoding as needed
+//       sampleRateHertz: 44100, // Adjust sample rate as needed
+//       languageCode: 'en-US', // Adjust language code as needed
+//     };
+
+//     // Create the audio object for the request
+//     const audio = {
+//       content: fileStream, // Use the file stream directly
+//     };
+
+//     // Perform speech recognition
+//     const [response] = await speechClient.recognize(config, audio);
+
+//     // Extract the transcript from the response
+//     const transcript = response[0].alternatives[0].transcript;
+
+//     // Clean up: remove the temporary file
+//     fs.unlinkSync(req.file.path);
+//     console.log(transcript);
+//     // Send the transcription back to the client
+//     res.json({ transcript });
+//   } catch (error) {
+//     console.error('Failed to process and send file:', error.message);
+//     res.status(500).send('Internal Server Error');
+//   }
+// });
+
+// module.exports = router;

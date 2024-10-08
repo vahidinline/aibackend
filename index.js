@@ -10,13 +10,13 @@ var Bugsnag = require('@bugsnag/js');
 var BugsnagPluginExpress = require('@bugsnag/plugin-express');
 
 // Initialize the Telegram bot
-const bot = initializeBot();
+// const bot = initializeBot();
 
 // Body parser middleware
 app.use(bodyParser.json());
 
 // Start the bot
-bot.launch();
+// bot.launch();
 
 Bugsnag.start({
   apiKey: '76ba41ec78cd787eeb0eb7b7dab64d3f',

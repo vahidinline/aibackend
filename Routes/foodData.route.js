@@ -9,75 +9,177 @@ const storeFoodItem = require('../middleware/storeFoodItems');
 const getsingleMealResult = require('../middleware/getSingleMealResult');
 
 // Function to get nutrition data from Open Food Facts API and format it to match FoodItemSchema
-async function getNutritionData(barcode) {
+// async function getNutritionData(barcode, userServingSize) {
+//   try {
+//     const response = await axios.get(
+//       `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
+//     );
+
+//     if (response.data && response.data.product) {
+//       const productData = response.data.product;
+
+//       // Extract baseServingSize from the API or default to 100g
+//       const baseServingSize = 100; // Open Food Facts often uses 100g as a standard
+//       const baseCalories = productData.nutriments['energy-kcal'] || 0;
+
+//       // Calculate the scale factor based on the user's serving size relative to 100g
+//       const scaleFactor = userServingSize / baseServingSize;
+
+//       return {
+//         food_item: productData.product_name,
+//         serving_size: userServingSize, // Use user-provided serving size
+//         calories: {
+//           amount: baseCalories * scaleFactor,
+//           unit: 'kcal',
+//         },
+//         total_fat: {
+//           amount: (productData.nutriments['fat'] || 0) * scaleFactor,
+//           unit: 'g',
+//         },
+//         saturated_fat: {
+//           amount: (productData.nutriments['saturated-fat'] || 0) * scaleFactor,
+//           unit: 'g',
+//         },
+//         cholesterol: {
+//           amount: 0, // Open Food Facts API doesn't provide cholesterol data
+//           unit: 'mg',
+//         },
+//         sodium: {
+//           amount: (productData.nutriments['sodium'] || 0) * scaleFactor,
+//           unit: 'mg',
+//         },
+//         total_carbohydrates: {
+//           amount: (productData.nutriments['carbohydrates'] || 0) * scaleFactor,
+//           unit: 'g',
+//         },
+//         dietary_fiber: {
+//           amount: (productData.nutriments['fiber'] || 0) * scaleFactor,
+//           unit: 'g',
+//         },
+//         sugars: {
+//           amount: (productData.nutriments['sugars'] || 0) * scaleFactor,
+//           unit: 'g',
+//         },
+//         protein: {
+//           amount: (productData.nutriments['proteins'] || 0) * scaleFactor,
+//           unit: 'g',
+//         },
+//         vitamins_and_minerals: {
+//           vitamin_a: {
+//             amount: 0, // Open Food Facts API doesn't provide vitamin A data
+//             unit: 'µg',
+//           },
+//           vitamin_c: {
+//             amount: 0, // Open Food Facts API doesn't provide vitamin C data
+//             unit: 'mg',
+//           },
+//           calcium: {
+//             amount: (productData.nutriments['calcium'] || 0) * scaleFactor,
+//             unit: 'mg',
+//           },
+//           iron: {
+//             amount: (productData.nutriments['iron'] || 0) * scaleFactor,
+//             unit: 'mg',
+//           },
+//         },
+//       };
+//     } else {
+//       console.log('No food data found for barcode:', barcode);
+//       return { error: 'No food data found for the provided barcode' };
+//     }
+//   } catch (error) {
+//     console.error('Error fetching data from Open Food Facts API:', error);
+//     return { error: 'Failed to fetch data from Open Food Facts API' };
+//   }
+// }
+
+async function getNutritionData(barcode, userServingSize) {
   try {
     const response = await axios.get(
       `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
     );
 
-    // Log the full response from the Open Food Facts API
-    // console.log(
-    //   'Open Food Facts API Response:',
-    //   JSON.stringify(response.data, null, 2)
-    // );
-
     if (response.data && response.data.product) {
       const productData = response.data.product;
 
+      // Assume base serving size is 100g for Open Food Facts API
+      const baseServingSize = 100;
+      const scaleFactor = userServingSize / baseServingSize;
+
       return {
         food_item: productData.product_name,
-        serving_size: 100,
+        serving_size: userServingSize, // Use user-provided serving size
         calories: {
-          amount: productData.nutriments['energy-kcal'] || '0',
+          amount: Math.round(
+            (productData.nutriments['energy-kcal'] || 0) * scaleFactor
+          ),
           unit: 'kcal',
         },
         total_fat: {
-          amount: productData.nutriments['fat'] || '0',
+          amount: Math.round(
+            (productData.nutriments['fat'] || 0) * scaleFactor
+          ),
           unit: 'g',
         },
         saturated_fat: {
-          amount: productData.nutriments['saturated-fat'] || '0',
+          amount: Math.round(
+            (productData.nutriments['saturated-fat'] || 0) * scaleFactor
+          ),
           unit: 'g',
         },
         cholesterol: {
-          amount: '0', // Open Food Facts API doesn't provide cholesterol data
+          amount: 0, // Open Food Facts API doesn't provide cholesterol data
           unit: 'mg',
         },
         sodium: {
-          amount: productData.nutriments['sodium'] || '0',
+          amount: Math.round(
+            (productData.nutriments['sodium'] || 0) * scaleFactor
+          ),
           unit: 'mg',
         },
         total_carbohydrates: {
-          amount: productData.nutriments['carbohydrates'] || '0',
+          amount: Math.round(
+            (productData.nutriments['carbohydrates'] || 0) * scaleFactor
+          ),
           unit: 'g',
         },
         dietary_fiber: {
-          amount: productData.nutriments['fiber'] || '0',
+          amount: Math.round(
+            (productData.nutriments['fiber'] || 0) * scaleFactor
+          ),
           unit: 'g',
         },
         sugars: {
-          amount: productData.nutriments['sugars'] || '0',
+          amount: Math.round(
+            (productData.nutriments['sugars'] || 0) * scaleFactor
+          ),
           unit: 'g',
         },
         protein: {
-          amount: productData.nutriments['proteins'] || '0',
+          amount: Math.round(
+            (productData.nutriments['proteins'] || 0) * scaleFactor
+          ),
           unit: 'g',
         },
         vitamins_and_minerals: {
           vitamin_a: {
-            amount: '0', // Open Food Facts API doesn't provide vitamin A data
+            amount: 0, // Open Food Facts API doesn't provide vitamin A data
             unit: 'µg',
           },
           vitamin_c: {
-            amount: '0', // Open Food Facts API doesn't provide vitamin C data
+            amount: 0, // Open Food Facts API doesn't provide vitamin C data
             unit: 'mg',
           },
           calcium: {
-            amount: productData.nutriments['calcium'] || '0',
+            amount: Math.round(
+              (productData.nutriments['calcium'] || 0) * scaleFactor
+            ),
             unit: 'mg',
           },
           iron: {
-            amount: productData.nutriments['iron'] || '0',
+            amount: Math.round(
+              (productData.nutriments['iron'] || 0) * scaleFactor
+            ),
             unit: 'mg',
           },
         },
@@ -104,7 +206,8 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    const nutritionData = await getNutritionData(barcode);
+    // Pass servingSize to getNutritionData function
+    const nutritionData = await getNutritionData(barcode, servingSize);
     if (nutritionData.error) {
       console.error('Nutrition data error:', nutritionData.error);
       return res.status(404).json({ error: nutritionData.error });
@@ -140,9 +243,6 @@ router.post('/', async (req, res) => {
         },
       ], // Changed to dataArray to represent all user inputs
     });
-
-    // Return a consistent response format
-    //res.json({ nutritionFacts: nutritionData, mealId: newMeal._id });
   } catch (error) {
     console.error('Error processing request:', error);
     res.status(500).json({ error: 'Internal server error' });

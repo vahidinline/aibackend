@@ -5,7 +5,7 @@ const Message = require('../models/message.model');
 const { mongoose } = require('../models');
 const { default: axios } = require('axios');
 const { OpenAIClient, AzureKeyCredential } = require('@azure/openai');
-const endpoint = process.env['AZURE_ENDPOINT'];
+const endpoint = process.env['OPENAI_FOOD_API_ENDPOINT'];
 const azureApiKey = process.env['AZURE_KEY'];
 const dalleEndpoint = process.env['AZURE_DALLE_ENDPOINT']; // New DALL-E endpoint
 

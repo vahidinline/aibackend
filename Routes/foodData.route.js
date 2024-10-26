@@ -105,10 +105,10 @@ async function getNutritionData(barcode, userServingSize) {
       // Assume base serving size is 100g for Open Food Facts API
       const baseServingSize = 100;
       const scaleFactor = userServingSize / baseServingSize;
-
+      // console.log('response:', response);
       return {
-        food_item: productData.product_name,
-        serving_size: userServingSize, // Use user-provided serving size
+        food_item: productData.product_name || productData?.generic_name,
+        serving_size: userServingSize + 'g', // Use user-provided serving size
         calories: {
           amount: Math.round(
             (productData.nutriments['energy-kcal'] || 0) * scaleFactor

@@ -21,7 +21,7 @@ async function extractFoodItems(userInput) {
 
     // Parse the extracted JSON content
     const parsedContent = JSON.parse(result);
-
+    console.log('parsedContent in extractFoodItems', parsedContent);
     // Check if the parsed content has an error code of 404
     if (parsedContent.error_code === 404 || parsedContent.error === 404) {
       console.log('parsedContent.error_code in extractFoodItems', 404);
